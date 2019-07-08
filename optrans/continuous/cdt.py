@@ -1,8 +1,6 @@
 import numpy as np
 from scipy import interp
 
-import matplotlib.pyplot as plt
-
 from .base import BaseTransform
 from ..utils import check_array, assert_equal_shape
 
@@ -33,15 +31,23 @@ class CDT(BaseTransform):
 
         Parameters
         ----------
+        x0 : 1d array
+            Independent axis variable of reference signal (sig0).
         sig0 : 1d array
             Reference signal.
+        x1 : 1d array
+            Independent axis variable of the signal to transform (sig1).
         sig1 : 1d array
             Signal to transform.
 
         Returns
         -------
-        lot : 1d array
+        sig1_hat : 1d array
             CDT of input signal sig1.
+        f : 1d array
+            Forward transport map.
+        xilde : 1d array
+            Independent axis variable of sig1_hat.
         """
         # Check input arrays
         sig0 = check_array(sig0, ndim=1, dtype=[np.float64, np.float32],
@@ -95,24 +101,33 @@ class CDT(BaseTransform):
             
         transport_map = self.transport_map_
 
-        self.x1 = x1
-        self.x0 = y
+        xtilde = y
+        sig1_hat = cdt
         self.is_fitted = True
 
-        return cdt, transport_map, self.x0
+        return sig1_hat, transport_map, xtilde
 
 
-    def inverse(self):
+    def inverse(self, transport_map, sig0, x1):
         """
         Inverse transform.
+        
+        Parameters
+        ----------
+        transport_map : 1d array
+            Forward transport map.
+        sig0 : 1d array
+            Reference signal.
+        x1 : 1d array
+            Independent axis variable of the signal to reconstruct.
 
         Returns
         -------
         sig1_recon : 1d array
-            Reconstructed signal sig1.
+            Reconstructed signal.
         """
         self._check_is_fitted()
-        return self.apply_inverse_map(self.transport_map_, self.sig0_)
+        return self.apply_inverse_map(transport_map, sig0, x1)
 
 
     def apply_forward_map(self, transport_map, sig1):
@@ -145,7 +160,7 @@ class CDT(BaseTransform):
         return sig0_recon
 
 
-    def apply_inverse_map(self, transport_map, sig0):
+    def apply_inverse_map(self, transport_map, sig0, x):
         """
         Apply inverse transport map.
 
@@ -170,7 +185,7 @@ class CDT(BaseTransform):
 
         # Reconstruct sig1
         #x = np.arange(sig0.size)
-        x = self.x1
+        
         fprime = np.gradient(transport_map)
         sig1_recon = interp(x, transport_map, sig0/fprime)
         return sig1_recon
