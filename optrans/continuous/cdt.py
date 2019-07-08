@@ -27,7 +27,7 @@ class CDT(BaseTransform):
         super(CDT, self).__init__()
 
 
-    def forward(self, sig0, sig1, rm_edge=False):
+    def forward(self, x0, sig0, x1, sig1, rm_edge=False):
         """
         Forward transform.
 
@@ -50,7 +50,7 @@ class CDT(BaseTransform):
                            force_strictly_positive=True)
 
         # Input signals must be the same size
-        assert_equal_shape(sig0, sig1, ['sig0', 'sig1'])
+        #assert_equal_shape(sig0, sig1, ['sig0', 'sig1'])
 
         self.sig0_ = sig0
 
@@ -59,16 +59,23 @@ class CDT(BaseTransform):
         cum1 = np.cumsum(sig1)
 
         # x co-ordinates and interpolated y co-ordinates
-        x = np.arange(sig0.size)
-        y = np.linspace(0, 1, sig0.size)
-        y0 = interp(y, cum0, x)
-        y1 = interp(y, cum1, x)
+        #x = np.arange(sig0.size)
+        x = x1
+        #y = np.linspace(0, 1, sig0.size)
+        y = x0
+        
+        a = y[0]
+        b = y[len(y)-1]
+        ytilde = (y-a)/(b-a)
+        
+        y0 = interp(ytilde, cum0, x0)
+        y1 = interp(ytilde, cum1, x)
 
-        # Compute displacements: u
-        self.displacements_ = interp(x, y0, y0-y1)
+        # Compute displacements: u = f(x)-x
+        self.displacements_ = interp(y, y0, y1-y0)
 
         # Compute transport map: f = x - u
-        self.transport_map_ = x - self.displacements_
+        self.transport_map_ = self.displacements_ - y
 
         # self.transport_map_ = interp(cum1, cum0, x)
         # self.displacements_ = x - self.transport_map_
@@ -76,18 +83,23 @@ class CDT(BaseTransform):
         # CDT = (x - f) * sqrt(I0)
         cdt = self.displacements_ * np.sqrt(sig0)
         
-        transport_map = self.transport_map_
-
-        self.is_fitted = True
-        
         if rm_edge:
             cdt = np.delete(cdt, 0)
             cdt = np.delete(cdt, len(cdt)-1)
             
-            transport_map = np.delete(transport_map, 0)
-            transport_map = np.delete(transport_map, len(transport_map)-1)
+            y = np.delete(y, 0)
+            y = np.delete(y, len(y)-1)
+            
+            self.transport_map_ = np.delete(self.transport_map_, 0)
+            self.transport_map_ = np.delete(self.transport_map_, len(self.transport_map_)-1)
+            
+        transport_map = self.transport_map_
 
-        return cdt, transport_map
+        self.x1 = x1
+        self.x0 = y
+        self.is_fitted = True
+
+        return cdt, transport_map, self.x0
 
 
     def inverse(self):
@@ -157,7 +169,8 @@ class CDT(BaseTransform):
         assert_equal_shape(transport_map, sig0, ['transport_map', 'sig0'])
 
         # Reconstruct sig1
-        x = np.arange(sig0.size)
+        #x = np.arange(sig0.size)
+        x = self.x1
         fprime = np.gradient(transport_map)
         sig1_recon = interp(x, transport_map, sig0/fprime)
         return sig1_recon
