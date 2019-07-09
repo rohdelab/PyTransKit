@@ -1,6 +1,7 @@
 import numpy as np
 from scipy import interp
 
+
 from .base import BaseTransform
 from ..utils import check_array, assert_equal_shape
 
@@ -67,26 +68,21 @@ class CDT(BaseTransform):
         # x co-ordinates and interpolated y co-ordinates
         #x = np.arange(sig0.size)
         x = x1
-        #y = np.linspace(0, 1, sig0.size)
-        y = x0
+        y = np.linspace(0, 1, sig0.size)
         
-        a = y[0]
-        b = y[len(y)-1]
-        ytilde = (y-a)/(b-a)
-        
-        y0 = interp(ytilde, cum0, x0)
-        y1 = interp(ytilde, cum1, x)
+        y0 = interp(y, cum0, x0)    # inverse of CDF of sig0
+        y1 = interp(y, cum1, x)     # inverse of CDF of sig1
 
-        # Compute displacements: u = f(x)-x
-        self.displacements_ = interp(y, y0, y1-y0)
+        # Compute displacements: u = f(x0)-x0
+        self.displacements_ = interp(x0, y0, y1-y0)
 
-        # Compute transport map: f = x - u
-        self.transport_map_ = self.displacements_ - y
+        # Compute transport map: f = u - x0
+        self.transport_map_ = self.displacements_ - x0
 
         # self.transport_map_ = interp(cum1, cum0, x)
         # self.displacements_ = x - self.transport_map_
 
-        # CDT = (x - f) * sqrt(I0)
+        # CDT = (f - x) * sqrt(I0)
         cdt = self.displacements_ * np.sqrt(sig0)
         
         if rm_edge:
@@ -101,7 +97,7 @@ class CDT(BaseTransform):
             
         transport_map = self.transport_map_
 
-        xtilde = y
+        xtilde = x0
         sig1_hat = cdt
         self.is_fitted = True
 
