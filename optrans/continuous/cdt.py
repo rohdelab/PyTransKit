@@ -74,10 +74,11 @@ class CDT(BaseTransform):
         y1 = interp(y, cum1, x)     # inverse of CDF of sig1
 
         # Compute displacements: u = f(x0)-x0
-        self.displacements_ = interp(x0, y0, y1-y0)
+        self.displacements_ = interp(x0, y0, y0-y1)
 
         # Compute transport map: f = u - x0
-        self.transport_map_ = self.displacements_ - x0
+        #self.transport_map_ = self.displacements_ - x0
+        self.transport_map_ = x0 - self.displacements_
 
         # self.transport_map_ = interp(cum1, cum0, x)
         # self.displacements_ = x - self.transport_map_
