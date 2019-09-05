@@ -185,4 +185,9 @@ class CDT(BaseTransform):
         
         fprime = np.gradient(transport_map)
         sig1_recon = interp(x, transport_map, sig0/fprime)
-        return sig1_recon
+        sig1_recon_f1 = interp(x, transport_map, 1/fprime)
+        return sig1_recon, sig1_recon_f1
+
+
+
+
