@@ -98,11 +98,11 @@ class CDT(BaseTransform):
             
         transport_map = self.transport_map_
 
-        xtilde = x0
+        self.xtilde = x0
         sig1_hat = cdt
         self.is_fitted = True
 
-        return sig1_hat, transport_map, xtilde
+        return sig1_hat, transport_map, self.xtilde
 
 
     def inverse(self, transport_map, sig0, x1):
@@ -185,7 +185,10 @@ class CDT(BaseTransform):
         
         fprime = np.gradient(transport_map)
         sig1_recon = interp(x, transport_map, sig0/fprime)
-        sig1_recon_f1 = interp(x, transport_map, 1/fprime)
+        
+        #sig1_recon_f1 = interp(x, transport_map, 1/fprime)
+        sig1_recon_f1 = interp(x, transport_map, self.xtilde)
+        sig1_recon_f1 = np.gradient(sig1_recon_f1)
         return sig1_recon, sig1_recon_f1
 
 
