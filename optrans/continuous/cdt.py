@@ -97,6 +97,7 @@ class CDT(BaseTransform):
             self.transport_map_ = np.delete(self.transport_map_, len(self.transport_map_)-1)
             
         transport_map = self.transport_map_
+        #transport_map = interp(cum0, x0, y1)
 
         self.xtilde = x0
         sig1_hat = cdt
@@ -186,9 +187,9 @@ class CDT(BaseTransform):
         fprime = np.gradient(transport_map)
         sig1_recon = interp(x, transport_map, sig0/fprime)
         
-        #sig1_recon_f1 = interp(x, transport_map, 1/fprime)
-        sig1_recon_f1 = interp(x, transport_map, self.xtilde)
-        sig1_recon_f1 = np.gradient(sig1_recon_f1)
+        sig1_recon_f1 = interp(x, transport_map, 1/fprime)
+        #sig1_recon_f1 = interp(x, transport_map, self.xtilde)
+        #sig1_recon_f1 = np.gradient(sig1_recon_f1)*np.interp(sig1_recon_f1, self.xtilde, sig0)
         return sig1_recon, sig1_recon_f1
 
 

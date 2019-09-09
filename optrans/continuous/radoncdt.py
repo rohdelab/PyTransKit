@@ -81,9 +81,11 @@ class RadonCDT(BaseTransform):
                                total=self.total)
             j1 = signal_to_pdf(rad1[:,i], epsilon=self.epsilon,
                                total=self.total)
+            x0=np.arange(len(j0))
+            x1=np.arange(len(j1))
 
             # Compute CDT of this projection
-            lot, _ = cdt.forward(j0, j1)
+            lot, _,_ = cdt.forward(x0, j0, x1, j1)
 
             # Update 2D Radon-CDT, displacements, and transport map
             rcdt.append(lot)
