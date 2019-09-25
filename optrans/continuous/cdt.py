@@ -2,8 +2,8 @@ import numpy as np
 from scipy import interp
 
 
-from .base import BaseTransform
-from ..utils import check_array, assert_equal_shape
+from optrans.continuous.base import BaseTransform
+from optrans.utils import check_array, assert_equal_shape
 
 
 class CDT(BaseTransform):
@@ -68,17 +68,18 @@ class CDT(BaseTransform):
         # x co-ordinates and interpolated y co-ordinates
         #x = np.arange(sig0.size)
         x = x1
-        y = np.linspace(0, 1, sig0.size)
+        y = cum0 #np.linspace(0, 1, sig0.size)
         
         y0 = interp(y, cum0, x0)    # inverse of CDF of sig0
         y1 = interp(y, cum1, x)     # inverse of CDF of sig1
 
         # Compute displacements: u = f(x0)-x0
-        self.displacements_ = interp(x0, y0, y0-y1)
+        self.displacements_ = interp(x0, y0, y1-y0)
+        #self.displacements_ = y1 - x0
 
         # Compute transport map: f = u - x0
         #self.transport_map_ = self.displacements_ - x0
-        self.transport_map_ = x0 - self.displacements_
+        self.transport_map_ = x0 + self.displacements_
 
         # self.transport_map_ = interp(cum1, cum0, x)
         # self.displacements_ = x - self.transport_map_
