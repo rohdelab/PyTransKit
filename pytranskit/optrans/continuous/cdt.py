@@ -2,8 +2,8 @@ import numpy as np
 from scipy import interp
 
 
-from optrans.continuous.base import BaseTransform
-from optrans.utils import check_array, assert_equal_shape
+from pytranskit.optrans.continuous.base import BaseTransform
+from pytranskit.optrans.utils import check_array, assert_equal_shape
 
 
 class CDT(BaseTransform):
