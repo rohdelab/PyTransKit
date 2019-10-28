@@ -1,15 +1,15 @@
-from distutils.core import setup
+import setuptools
 
-with open('README.md') as f:
-    readme = f.read()
+with open("README.md", "r") as fh:
+    long_description = fh.read()
 
-setup(
+setuptools.setup(
   name = 'pytranskit',
   packages = ['pytranskit'],
   version = '0.01',
   license='GNU GPL',
   description = 'Python transport based signal processing toolkit.',
-  long_description=readme,
+  long_description=long_description,
   long_description_content_type='text/markdown',
   author = 'Abu Hasnat Mohammad Rubaiyat, Xuwang Yin, Liam Cattell',
   author_email = 'ar3fx@virginia.edu, xuwangyin@gmail.com',
