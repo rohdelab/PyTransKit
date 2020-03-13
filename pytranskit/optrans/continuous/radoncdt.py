@@ -36,7 +36,7 @@ class RadonCDT(BaseTransform):
         self.total = 1.
 
 
-    def forward(self, sig0, sig1):
+    def forward(self, x0_range, sig0, x1_range, sig1, rm_edge=False):
         """
         Forward transform.
 
@@ -65,8 +65,12 @@ class RadonCDT(BaseTransform):
         self.sig0_ = sig0
 
         # Radon transform of signals
-        rad0 = radon(sig0, theta=self.theta, circle=False)
+       
         rad1 = radon(sig1, theta=self.theta, circle=False)
+        if len(np.unique(sig0)) == 1:
+            rad0 = np.ones(rad1.shape)
+        else:
+            rad0 = radon(sig0, theta=self.theta, circle=False)
 
         # Initalize CDT, Radon-CDT, displacements, and transport map
         cdt = CDT()
@@ -77,15 +81,18 @@ class RadonCDT(BaseTransform):
         # Loop over angles
         for i in range(self.theta.size):
             # Convert projection to PDF
+            rad0[0,i] = 0
             j0 = signal_to_pdf(rad0[:,i], epsilon=self.epsilon,
                                total=self.total)
             j1 = signal_to_pdf(rad1[:,i], epsilon=self.epsilon,
                                total=self.total)
-            x0=np.arange(len(j0))
-            x1=np.arange(len(j1))
+            #x0=np.arange(len(j0))
+            #x1=np.arange(len(j1))
+            x0 = np.linspace(x0_range[0], x0_range[1], len(j0))
+            x1 = np.linspace(x1_range[0], x1_range[1], len(j1))
 
             # Compute CDT of this projection
-            lot, _,_ = cdt.forward(x0, j0, x1, j1)
+            lot, _,_ = cdt.forward(x0, j0, x1, j1, rm_edge)
 
             # Update 2D Radon-CDT, displacements, and transport map
             rcdt.append(lot)
@@ -102,7 +109,7 @@ class RadonCDT(BaseTransform):
         return rcdt
 
 
-    def inverse(self):
+    def inverse(self, transport_map, sig0, x1_range):
         """
         Inverse transform.
 
@@ -112,7 +119,7 @@ class RadonCDT(BaseTransform):
             Reconstructed signal sig1.
         """
         self._check_is_fitted()
-        return self.apply_inverse_map(self.transport_map_, self.sig0_)
+        return self.apply_inverse_map(transport_map, sig0, x1_range)
 
 
     def apply_forward_map(self, transport_map, sig1):
@@ -169,7 +176,7 @@ class RadonCDT(BaseTransform):
         return sig0_recon
 
 
-    def apply_inverse_map(self, transport_map, sig0):
+    def apply_inverse_map(self, transport_map, sig0, x_range):
         """
         Appy inverse transport map.
 
@@ -204,9 +211,12 @@ class RadonCDT(BaseTransform):
         for i in range(self.theta.size):
             # Convert projection to PDF
             j0 = signal_to_pdf(rad0[:,i], epsilon=1e-8, total=1.)
+            
+            x = np.linspace(x_range[0], x_range[1], len(j0))
 
             # Radon transform of sig1 comprised of inverse CDT of projections
-            rad1[:,i] = cdt.apply_inverse_map(transport_map[:,i], j0)
+            #rad1[:,i],_ = cdt.apply_inverse_map(transport_map[:,i], j0, x)
+            rad1[:,i] = cdt.apply_inverse_map(transport_map[:,i], j0, x)
 
         # Inverse Radon transform
         sig1_recon = iradon(rad1, self.theta, circle=False, filter='ramp')
