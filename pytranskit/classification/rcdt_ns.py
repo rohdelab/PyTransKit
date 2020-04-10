@@ -1,57 +1,57 @@
-
 import numpy as np
 import numpy.linalg as LA
-import multiprocessing as mp
+import cupy as cp
 
-from pytranskit.optrans.continuous.radoncdt import RadonCDT
+def add_trans_samples(rcdt_features, theta):
+    # rcdt_features: (n_samples, proj_len, num_angles)
+    # deformation vectors for  translation
+    v1, v2 = np.cos(theta*np.pi/180), np.sin(theta*np.pi/180)
+    v1 = np.repeat(v1[np.newaxis], rcdt_features.shape[1], axis=0)
+    v2 = np.repeat(v2[np.newaxis], rcdt_features.shape[1], axis=0)
+    return np.concatenate([rcdt_features, v1[np.newaxis], v2[np.newaxis]])
 
-eps = 1e-6
-x0_range = [0, 1]
-x_range = [0, 1]
-Rdown = 4  # downsample radon projections (w.r.t. angles)
-theta = np.linspace(0, 176, 180 // Rdown)
 
 class RCDT_NS:
-    def __init__(self, num_classes, thetas=theta, rm_edge=False):
+    def __init__(self, theta, no_deform_model=False, use_image_feature=False, count_flops=False, use_gpu=False):
         """
         Parameters
         ----------
-        num_classes : integer, total number of classes
-        thetas : array-like, angles in degrees for taking radon projections
+        theta : array-like, angles in degrees for taking radon projections
             default = [0,180) with increment of 4 degrees.
-        rm_edge : boolean flag; IF TRUE the first and last points of RCDTs will be removed
-            default = False
         """
-        self.num_classes = num_classes
-        self.thetas = thetas
-        self.rm_edge = rm_edge
+        self.num_classes = None
         self.subspaces = []
         self.len_subspace = 0
 
-    def fit(self, Xtrain, Ytrain, no_deform_model=False):
+        self.theta = theta
+        self.no_deform_model = no_deform_model
+        self.use_image_feature = use_image_feature
+        self.count_flops = count_flops
+        self.use_gpu = use_gpu
+
+    def fit(self, X, y, num_classes):
         """Fit linear model.
         Parameters
         ----------
-        Xtrain : array-like, shape (n_samples, n_rows, n_columns)
-            Image data for training.
-        Ytrain : ndarray of shape (n_samples,)
-            Labels of the training images.
-        no_deform_model : boolean flag; IF TRUE, no deformation model will be added
-            default = False.
+        X : array-like, shape (n_samples, n_proj, n_angles))
+            Training data.
+        y : ndarray of shape (n_samples,)
+            Target values.
+        Returns
+        -------
+        self :
+            Returns an instance of self.
         """
-        
-        # calculate the RCDT using parallel CPUs
-        print('\nCalculating RCDTs for training images ...')
-        Xrcdt = self.rcdt_parallel(Xtrain)
-        
-        # generate the basis vectors for each class
-        print('Generating basis vectors for each class ...')
-        for class_idx in range(self.num_classes):
-            class_data = Xrcdt[Ytrain == class_idx]
-            if no_deform_model:
+        if self.count_flops:
+            assert X.dtype == np.float64
+        self.num_classes = num_classes
+        for class_idx in range(num_classes):
+            # generate the bases vectors
+            class_data = X[y == class_idx]
+            if self.no_deform_model or self.use_image_feature:
                 flat = class_data.reshape(class_data.shape[0], -1)
             else:
-                class_data_trans = self.add_trans_samples(class_data)
+                class_data_trans = add_trans_samples(class_data, self.theta)
                 flat = class_data_trans.reshape(class_data_trans.shape[0], -1)
             
             u, s, vh = LA.svd(flat,full_matrices=False)
@@ -67,49 +67,33 @@ class RCDT_NS:
             basis = vh[:flat.shape[0]]
             self.subspaces.append(basis)
 
+            if self.count_flops:
+               assert basis.dtype == np.float64
 
-    def predict(self, Xtest, use_gpu=False):
+    def predict(self, X):
         """Predict using the linear model
         Parameters
         ----------
-        Xtest : array-like, shape (n_samples, n_rows, n_columns)
-            Image data for testing.
-        use_gpu: boolean flag; IF TRUE, use gpu for calculations
-            default = False.
-            
+        X : array-like, sparse matrix, shape (n_samples, n_proj, n_angles))
         Returns
         -------
         ndarray of shape (n_samples,)
-           Predicted target values per element in Xtest.
+           Predicted target values per element in X.
         """
-        
-        # calculate the RCDT using parallel CPUs
-        print('\nCalculating RCDTs for testing images ...')
-        Xrcdt = self.rcdt_parallel(Xtest)
-        
-        # vectorize RCDT matrix
-        X = Xrcdt.reshape([Xrcdt.shape[0], -1])
-        
-        # import cupy for using GPU
-        if use_gpu:
-            import cupy as cp
-            X = cp.array(X)
-        
-        # find nearest subspace for each test sample
-        print('Finding nearest subspace for each test sample ...')
+        X = X.reshape([X.shape[0], -1])
+        #X = np.transpose(X,(0,2,1)).reshape(X.shape[0],-1)
         D = []
         for class_idx in range(self.num_classes):
             basis = self.subspaces[class_idx]
             basis = basis[:self.len_subspace,:]
             
-            if use_gpu:
-                D.append(cp.linalg.norm(cp.matmul(cp.matmul(X, cp.array(basis).T), 
-                                                  cp.array(basis)) -X, axis=1))
+            if self.use_gpu:
+                D.append(cp.linalg.norm(cp.matmul(cp.matmul(X, cp.array(basis).T), cp.array(basis)) -X, axis=1))
             else:
                 proj = X @ basis.T  # (n_samples, n_basis)
                 projR = proj @ basis  # (n_samples, n_features)
                 D.append(LA.norm(projR - X, axis=1))
-        if use_gpu:
+        if self.use_gpu:
             preds = cp.argmin(cp.stack(D, axis=0), axis=0)
             return cp.asnumpy(preds)
         else:
@@ -117,39 +101,3 @@ class RCDT_NS:
             preds = np.argmin(D, axis=0)
             return preds
 
-
-    def fun_rcdt_single(self, I):
-        # I: (rows, columns)
-        radoncdt = RadonCDT(self.thetas)
-        template = np.ones(I.shape, dtype=I.dtype)
-        Ircdt = radoncdt.forward(x0_range, template / np.sum(template), 
-                                 x_range, I / np.sum(I), 
-                                 self.rm_edge)
-        return Ircdt
-    
-    def fun_rcdt_batch(self, data):
-        # data: (n_samples, rows, columns)
-        dataRCDT = [self.fun_rcdt_single(data[j, :, :] + eps) for j in range(data.shape[0])]
-        return np.array(dataRCDT)
-    
-    def rcdt_parallel(self, X):
-        # X: (n_samples, rows, columns)
-        # calc RCDT of images
-        n_cpu = np.min([mp.cpu_count(), X.shape[0]])
-        splits = np.array_split(X, n_cpu, axis=0)
-        pl = mp.Pool(n_cpu)
-    
-        dataRCDT = pl.map(self.fun_rcdt_batch, splits)
-        rcdt_features = np.vstack(dataRCDT)  # (n_samples, proj_len, num_angles)
-        pl.close()
-        pl.join()
-
-        return rcdt_features
-        
-    def add_trans_samples(self, rcdt_features):
-        # rcdt_features: (n_samples, proj_len, num_angles)
-        # deformation vectors for  translation
-        v1, v2 = np.cos(self.thetas*np.pi/180), np.sin(self.thetas*np.pi/180)
-        v1 = np.repeat(v1[np.newaxis], rcdt_features.shape[1], axis=0)
-        v2 = np.repeat(v2[np.newaxis], rcdt_features.shape[1], axis=0)
-        return np.concatenate([rcdt_features, v1[np.newaxis], v2[np.newaxis]])
