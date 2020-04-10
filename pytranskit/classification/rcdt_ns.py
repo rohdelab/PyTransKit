@@ -135,8 +135,9 @@ class RCDT_NS:
     def rcdt_parallel(self, X):
         # X: (n_samples, rows, columns)
         # calc RCDT of images
-        splits = np.array_split(X, mp.cpu_count(), axis=0)
-        pl = mp.Pool(mp.cpu_count())
+        n_cpu = np.min([mp.cpu_count(), X.shape[0]])
+        splits = np.array_split(X, n_cpu, axis=0)
+        pl = mp.Pool(n_cpu)
     
         dataRCDT = pl.map(self.fun_rcdt_batch, splits)
         rcdt_features = np.vstack(dataRCDT)  # (n_samples, proj_len, num_angles)
