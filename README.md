@@ -20,5 +20,4 @@ from pytranskit.optrans.continuous.cdt import CDT
 - Radon-CDT Nearest Subspace (RCDT-NS) classifier [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/03_tutorial_RCDT-NS_classifier.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/03_tutorial_RCDT-NS_classifier.ipynb)]
 
 ## Resources
-- Overview of ideas/theory/applications https://www.dropbox.com/s/gxwrseyrc4j8197/Lagrangian_transform_19_final.pptx?dl=0
 - External website http://imagedatascience.com/transport/
