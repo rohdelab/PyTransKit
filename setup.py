@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
   name="pytranskit",
-  version="0.1.5",
+  version="0.1.6",
   author="Abu Hasnat Mohammad Rubaiyat, Xuwang Yin, Liam Cattell",
   author_email="ar3fx@virginia.edu, xuwangyin@gmail.com",
   description="Python transport based signal processing toolkit.",
