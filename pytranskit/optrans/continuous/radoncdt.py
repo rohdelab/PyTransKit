@@ -199,7 +199,10 @@ class RadonCDT(BaseTransform):
                            force_strictly_positive=True)
 
         # Initialize Radon transforms
-        rad0 = radon(sig0, theta=self.theta, circle=False)
+        if len(np.unique(sig0)) == 1:
+            rad0 = np.ones(transport_map.shape)
+        else:
+            rad0 = radon(sig0, theta=self.theta, circle=False)
         rad1 = np.zeros_like(rad0)
 
         # Check transport map and Radon transforms are the same size
