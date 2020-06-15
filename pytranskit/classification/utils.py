@@ -70,6 +70,43 @@ def load_data(dataset, num_classes, datadir='data'):
 
     return (x_train, y_train), (x_test, y_test)
 
+def load_data_1D(dataset, num_classes, datadir='data'):
+    cache_file = os.path.join(datadir, dataset, 'dataset.hdf5')
+    if os.path.exists(cache_file):
+        with h5py.File(cache_file, 'r') as f:
+            x_train, y_train = f['x_train'][()], f['y_train'][()]
+            x_test, y_test = f['x_test'][()], f['y_test'][()]
+            print('loaded from cache file data: x_train {} x_test {}'.format(x_train.shape, x_test.shape))
+            return (x_train, y_train), (x_test, y_test)
+
+    print('loading data from mat files')
+    x_train, y_train, x_test, y_test = [], [], [], []
+    for split in ['training', 'testing']:
+        for classidx in range(num_classes):
+            datafile = os.path.join(datadir, dataset, '{}/dataORG_{}.mat'.format(split, classidx))
+            # loadmat(datafile)['xxO'] is of shape (H, W, N)
+            data = loadmat(datafile)['xxO'].T
+            label = np.zeros(data.shape[0], dtype=np.int64)+classidx
+            #print('split {} class {} data.shape {}'.format(split, classidx, data.shape))
+            if split == 'training':
+                x_train.append(data)
+                y_train.append(label)
+            else:
+                x_test.append(data)
+                y_test.append(label)
+    x_train, y_train = np.concatenate(x_train), np.concatenate(y_train)
+    x_test, y_test = np.concatenate(x_test), np.concatenate(y_test)
+    print('x_train.shape {} x_test.shape {}'.format(x_train.shape, x_test.shape))
+
+    with h5py.File(cache_file, 'w') as f:
+        f.create_dataset('x_train', data=x_train)
+        f.create_dataset('y_train', data=y_train)
+        f.create_dataset('x_test', data=x_test)
+        f.create_dataset('y_test', data=y_test)
+        print('saved to {}'.format(cache_file))
+
+    return (x_train, y_train), (x_test, y_test)
+
 def take_train_samples(x_train, y_train, n_samples_perclass, num_classes, repeat):
     max_index = x_train.shape[0] // num_classes
     train_index = new_index_matrix(max_index, n_samples_perclass, num_classes, repeat, y_train)
