@@ -125,7 +125,7 @@ class CDT_NS:
         x0 = np.linspace(x0_range[0], x0_range[1], len(j0))
         x1 = np.linspace(x1_range[0], x1_range[1], len(j1))
         
-        shat = cdt.forward(x0, j0, x1, j1, self.rm_edge)
+        shat,_,_ = cdt.forward(x0, j0, x1, j1, self.rm_edge)
         return shat
     
     def fun_cdt_batch(self, data):
