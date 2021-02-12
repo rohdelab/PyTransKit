@@ -49,7 +49,7 @@ class CDT(BaseTransform):
         sig1_hat : 1d array
             old definition.
         xilde : 1d array
-            Independent axis variable of sig1_hat.
+            Independent axis variable in CDT space.
         """
         # Check input arrays
         sig0 = check_array(sig0, ndim=1, dtype=[np.float64, np.float32],
