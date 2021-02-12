@@ -82,11 +82,13 @@ class CDT(BaseTransform):
         # Compute transport map: f = u - x0
         #self.transport_map_ = self.displacements_ - x0
         self.transport_map_ = y1
+        
+        # CDT (new definition)
         sig1_cdt = self.transport_map_
         self.xtilde = x0
 
 
-        # CDT = (f - x) * sqrt(I0)
+        # OLD CDT = (f - x) * sqrt(I0)
         sig1_hat = self.displacements_ * np.sqrt(sig0)
         
         if rm_edge:
