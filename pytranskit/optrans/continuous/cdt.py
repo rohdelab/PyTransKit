@@ -44,10 +44,10 @@ class CDT(BaseTransform):
 
         Returns
         -------
+        sig1_cdt : 1d array
+            CDT of input signal sig1 (new definition).
         sig1_hat : 1d array
-            CDT of input signal sig1.
-        f : 1d array
-            Forward transport map.
+            old definition.
         xilde : 1d array
             Independent axis variable of sig1_hat.
         """
