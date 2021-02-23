@@ -8,14 +8,16 @@ PyTransKit
                                                                                            
 Python Transport Based Signal Processing Toolkit 
 
+
+
 .. toctree::
    :maxdepth: 3
-   :caption: Contents:
 
    README
    pytranskit
 
-
+.. include:: README.rst
+   :start-line: 0
 
 Indices and tables
 ==================
