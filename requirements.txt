@@ -3,3 +3,4 @@ scikit-image
 scikit-learn
 scipy
 numpy
+bluepy

@@ -1,0 +1,19 @@
+pytranskit.optrans package
+==========================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   pytranskit.optrans.continuous
+   pytranskit.optrans.utils
+
+Module contents
+---------------
+
+.. automodule:: pytranskit.optrans
+   :members:
+   :undoc-members:
+   :show-inheritance:
