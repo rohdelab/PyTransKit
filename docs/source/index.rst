@@ -3,13 +3,16 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to PyTransKit's documentation!
+PyTransKit
 ======================================
+                                                                                           
+Python Transport Based Signal Processing Toolkit 
 
 .. toctree::
    :maxdepth: 3
    :caption: Contents:
 
+   README
    pytranskit
 
 
