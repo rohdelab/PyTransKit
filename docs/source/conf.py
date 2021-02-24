@@ -12,15 +12,15 @@
 #
 import os
 import sys
-sys.path.insert(0, os.path.abspath('../../pytranskit'))
+# sys.path.insert(0, os.path.abspath('../../pytranskit'))
 sys.path.insert(0, os.path.abspath('../../'))
 
 
 # -- Project information -----------------------------------------------------
 
 project = 'PyTransKit'
-copyright = '2021, Abu Hasnat Mohammad Rubaiyat, Xuwang Yin, Mohammad Shifat E Rabbi, Gustavo Kunde Rohde'
-author = 'Abu Hasnat Mohammad Rubaiyat, Xuwang Yin, Mohammad Shifat E Rabbi, Gustavo Kunde Rohde'
+copyright = '2021, Abu Hasnat Mohammad Rubaiyat, Xuwang Yin, Liam Cattell, Soheil Kolouri, Mohammad Shifat-E-Rabbi, Yan Zhuang, Gustavo Rohde'
+author = 'Abu Hasnat Mohammad Rubaiyat, Xuwang Yin, Liam Cattell, Soheil Kolouri, Mohammad Shifat-E-Rabbi, Yan Zhuang, Gustavo Rohde'
 
 # The full version, including alpha/beta/rc tags
 release = '0.1'
