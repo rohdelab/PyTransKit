@@ -74,8 +74,9 @@ class RCDT_NS:
         
         Let :math:`B^k` be the basis vectors of class :math:`k`, and :math:`x` be the RCDT sapce feature vector of an input, 
         the NS method performs classification by
+        
         .. math::
-        \arg\min_k \| B^k (B^k)^T x - x\|^2
+            \arg\min_k \| B^k (B^k)^T x - x\|^2
         
         Parameters
         ----------
