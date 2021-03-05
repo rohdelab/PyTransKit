@@ -76,7 +76,7 @@ class RCDT_NS:
         the NS method performs classification by
         
         .. math::
-            \arg\min_k \| B^k (B^k)^T x - x\|^2
+            arg\min_k \| B^k (B^k)^T x - x\|^2
         
         Parameters
         ----------
