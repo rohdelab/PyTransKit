@@ -72,6 +72,12 @@ class RCDT_NS:
     def predict(self, Xtest, use_gpu=False):
         """Predict using the linear model
         
+        Let :math:`B^k` be the basis vectors of class :math:`k`, and :math:`x` be the RCDT sapce feature vector of an input, 
+        the NS method performs classification by 
+        
+        .. math::
+        \arg\min_k \| B^k (B^k)^T x - x\|^2
+        
         Parameters
         ----------
         Xtest : array-like, shape (n_samples, n_rows, n_columns)
@@ -84,11 +90,6 @@ class RCDT_NS:
         ndarray of shape (n_samples,)
            Predicted target values per element in Xtest.
            
-        Let :math:`B^k` be the basis vectors of class :math:`k`, and :math:`x` be the RCDT sapce feature vector of an input, 
-        the NS method performs classification by 
-        
-        .. math::
-        \arg\min_k \| B^k (B^k)^T x - x\|^2.
         """
         
         # calculate the RCDT using parallel CPUs
