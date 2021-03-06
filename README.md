@@ -19,7 +19,7 @@ from pytranskit.optrans.continuous.cdt import CDT
 
 ## Transport-based Transforms
 ### Cumulative Distribution Transform (CDT)
-Let <img src="https://latex.codecogs.com/svg.latex?s(\mathbf{x}),&space;\mathbf{x}\in\mathbb{R}" title="s(\mathbf{x}), \mathbf{x}\in\mathbb{R}" /> be a positive density function (PDF).
+Let <img src="http://www.sciweavers.org/tex2img.php?eq=s%28%5Cmathbf%7Bx%7D%29%2C%20%5Cmathbf%7Bx%7D%5Cin%5Cmathbb%7BR%7D&bc=White&fc=Black&im=bmp&fs=12&ff=anttor&edit=0" align="center" border="0" alt="s(\mathbf{x}), \mathbf{x}\in\mathbb{R}" width="85" height="19" /> be a positive density function (PDF).
 
 ### Radon-Cumulative Distribution Transform (R-CDT)
 
