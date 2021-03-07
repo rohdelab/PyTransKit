@@ -19,7 +19,8 @@ from pytranskit.optrans.continuous.cdt import CDT
 
 ## Transport-based Transforms
 ### Cumulative Distribution Transform (CDT)
-- Let ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cdpi%7B100%7D%20s%28%5Cmathbf%7Bx%7D%29%2C%20%5Cmathbf%7Bx%7D%5Cin%5COmega_%7Bs%7D%5Csubseteq%5Cmathbb%7BR%7D) be a positive density function (PDF). The CDT of the PDF 
+#### Definition
+Let ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cdpi%7B100%7D%20s%28%5Cmathbf%7Bx%7D%29%2C%20%5Cmathbf%7Bx%7D%5Cin%5COmega_%7Bs%7D%5Csubseteq%5Cmathbb%7BR%7D) be a positive density function (PDF). The CDT of the PDF 
 ![equation](https://latex.codecogs.com/svg.latex?s%28%5Cmathbf%7Bx%7D%29) 
 with respect to a reference PDF ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20s_0%28%5Cmathbf%7Bx%7D%29%2C%20%5Cmathbf%7Bx%7D%5Cin%5COmega_%7Bs_0%7D%5Csubseteq%5Cmathbb%7BR%7D) is given by the mass preserving function ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cwidehat%7Bs%7D%28%5Cmathbf%7Bx%7D%29) that satisfies
 
@@ -31,7 +32,8 @@ where, ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20S%28x%29%20%
 
 ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20S_0%28x%29%20%3D%20%5Cint_%7B-%5Cinfty%7D%5E%7Bx%7D%20s_0%28x%29dx)
 
-- [[Cumulative Distribution Transform (CDT) tutorial](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/01_tutorial_cdt.ipynb)] [[nbviwer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/01_tutorial_cdt.ipynb)]
+#### Tutorial
+- Cumulative Distribution Transform (CDT) tutorial [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/01_tutorial_cdt.ipynb)] [[nbviwer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/01_tutorial_cdt.ipynb)]
 
 ### Radon-Cumulative Distribution Transform (R-CDT)
 
