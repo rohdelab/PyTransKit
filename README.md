@@ -31,7 +31,7 @@ where, ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20S%28x%29%20%
 
 ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20S_0%28x%29%20%3D%20%5Cint_%7B-%5Cinfty%7D%5E%7Bx%7D%20s_0%28x%29dx)
 
-- Cumulative Distribution Transform (CDT) tutorial [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/01_tutorial_cdt.ipynb)] [[nbviwer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/01_tutorial_cdt.ipynb)]
+- [[Cumulative Distribution Transform (CDT) tutorial](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/01_tutorial_cdt.ipynb)] [[nbviwer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/01_tutorial_cdt.ipynb)]
 
 ### Radon-Cumulative Distribution Transform (R-CDT)
 
