@@ -26,7 +26,9 @@ with respect to a reference PDF ![equation](https://latex.codecogs.com/svg.latex
 
 ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cint_%7B%5Cinf%28%5COmega_s%29%7D%5E%7B%5Chat%7Bs%7D%28x%29%7D%20s%28u%29du%20%3D%20%5Cint_%7B%5Cinf%28%5COmega_%7Bs_0%7D%29%7D%5E%7Bx%7D%20s_0%28u%29du)
 
-which yields ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cwidehat%7Bs%7D%28x%29%20%3D%20S%5E%7B-1%7D%28S_0%28x%29%29) ,
+which yields 
+
+![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cwidehat%7Bs%7D%28x%29%20%3D%20S%5E%7B-1%7D%28S_0%28x%29%29) ,
 
 where, ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20S%28x%29%20%3D%20%5Cint_%7B-%5Cinfty%7D%5E%7Bx%7D%20s%28x%29dx)    and    
 
