@@ -20,6 +20,7 @@ from pytranskit.optrans.continuous.cdt import CDT
 ## Transport-based Transforms
 ### Cumulative Distribution Transform (CDT)
 Let ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cdpi%7B100%7D%20s%28%5Cmathbf%7Bx%7D%29%2C%20%5Cmathbf%7Bx%7D%5Cin%5COmega_%7Bs%7D%5Csubseteq%5Cmathbb%7BR%7D) be a positive density function (PDF). The CDT ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cwidehat%7Bs%7D%28%5Cmathbf%7Bx%7D%29) of the PDF ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20s%28%5Cmathbf%7Bx%7D%29) with respect to a reference PDF ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20s_0%28%5Cmathbf%7Bx%7D%29%2C%20%5Cmathbf%7Bx%7D%5Cin%5COmega_%7Bs_0%7D%5Csubseteq%5Cmathbb%7BR%7D) is defined as,
+
 ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cint_%7B%5Cinf%28%5COmega_s%29%7D%5E%7B%5Chat%7Bs%7D%28x%29%7D%20s%28u%29du%20%3D%20%5Cint_%7B%5Cinf%28%5COmega_%7Bs_0%7D%29%7D%5E%7Bx%7D%20s_0%28u%29du).
 
 
