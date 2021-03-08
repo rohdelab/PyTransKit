@@ -22,19 +22,19 @@ from pytranskit.optrans.continuous.cdt import CDT
 #### Definition
 Let <img src="https://latex.codecogs.com/svg.latex?s(x),x\in\Omega_{s}\subset\mathbb{R}" title="s(x),x\in\Omega_{s}\subset\mathbb{R}" align=center> be a positive density function (PDF). The CDT of the PDF <img src="https://latex.codecogs.com/svg.latex?s(x)" title="s(x)" align=center> with respect to a reference PDF <img src="https://latex.codecogs.com/svg.latex?s_0(x),x\in\Omega_{s_0}\subset\mathbb{R}" title="s_0(x),x\in\Omega_{s_0}\subset\mathbb{R}" align=center> is given by the mass preserving function <img src="https://latex.codecogs.com/svg.latex?\widehat{s}(x)" title="\widehat{s}(x)" align=center> that satisfies - 
 
-![forwardcdt1](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cint_%7B%5Cinf%28%5COmega_s%29%7D%5E%7B%5Chat%7Bs%7D%28x%29%7D%20s%28u%29du%20%3D%20%5Cint_%7B%5Cinf%28%5COmega_%7Bs_0%7D%29%7D%5E%7Bx%7D%20s_0%28u%29du)
+<img src="https://latex.codecogs.com/svg.latex?\int_{\inf(\Omega_s)}^{\widehat{s}(x)}&space;s(u)du&space;=&space;\int_{\inf(\Omega_{s_0})}^{x}&space;s_0(u)du" title="\int_{\inf(\Omega_s)}^{\widehat{s}(x)} s(u)du = \int_{\inf(\Omega_{s_0})}^{x} s_0(u)du" align=center>
 
 which yields 
 
 <img src="https://latex.codecogs.com/svg.latex?\widehat{s}(t)&space;=&space;S^{-1}(S_0(t))" title="\widehat{s}(t) = S^{-1}(S_0(t))" align=center/>,
 
-where, ![cdf1](https://latex.codecogs.com/svg.latex?S%28x%29%20%3D%20%5Cint_%7B-%5Cinfty%7D%5E%7Bx%7D%20s%28u%29du)    and    
+where, <img src="https://latex.codecogs.com/svg.latex?S(x)&space;=&space;\int_{-\infty}^{x}&space;s(u)du" title="S(x) = \int_{-\infty}^{x} s(u)du" align=center>    and    
 
-![cdf0](https://latex.codecogs.com/svg.latex?S_0%28x%29%20%3D%20%5Cint_%7B-%5Cinfty%7D%5E%7Bx%7D%20s_0%28u%29du)
+<img src="https://latex.codecogs.com/svg.latex?S_0(x)&space;=&space;\int_{-\infty}^{x}&space;s_0(u)du" title="S_0(x) = \int_{-\infty}^{x} s_0(u)du" align=center>
 
-The inverse transform of the CDT ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cwidehat%7Bs%7D%28x%29) is given by,
+The inverse transform of the CDT <img src="https://latex.codecogs.com/svg.latex?\widehat{s}(x)" title="\widehat{s}(x)" align=center> is given by,
 
-![invcdt](https://latex.codecogs.com/svg.latex?s%28x%29%20%3D%20%28%5Cwidehat%7Bs%7D%5E%7B-1%7D%28x%29%29%27s_0%28%5Cwidehat%7Bs%7D%5E%7B-1%7D%28x%29%29)
+<img src="https://latex.codecogs.com/svg.latex?s(x)=(\widehat{s}^{-1}(x))'s_0(\widehat{s}^{-1}(x))" title="s(x)=(\widehat{s}^{-1}(x))'s_0(\widehat{s}^{-1}(x))" align=center>
 
 #### Tutorial
 - Cumulative Distribution Transform (CDT) tutorial [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/01_tutorial_cdt.ipynb)] [[nbviwer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/01_tutorial_cdt.ipynb)]
