@@ -28,7 +28,7 @@ with respect to a reference PDF ![equation](https://latex.codecogs.com/svg.latex
 
 which yields 
 
-![forwardcdt2](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cwidehat%7Bs%7D%28x%29%20%3D%20S%5E%7B-1%7D%28S_0%28x%29%29) ,
+<img src="https://latex.codecogs.com/svg.latex?\widehat{s}(t)&space;=&space;S^{-1}(S_0(t))" title="\widehat{s}(t) = S^{-1}(S_0(t))" align=center/>,
 
 where, ![cdf1](https://latex.codecogs.com/svg.latex?S%28x%29%20%3D%20%5Cint_%7B-%5Cinfty%7D%5E%7Bx%7D%20s%28u%29du)    and    
 
