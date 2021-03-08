@@ -34,9 +34,9 @@ where, ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20S%28x%29%20%
 
 ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20S_0%28x%29%20%3D%20%5Cint_%7B-%5Cinfty%7D%5E%7Bx%7D%20s_0%28u%29du)
 
-The inverse transform of the CDT ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cwidehat%7Bs%7D%28%5Cmathbf%7Bx%7D%29) is given by,
+The inverse transform of the CDT ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cwidehat%7Bs%7D%28x%29) is given by,
 
-
+![equation](https://latex.codecogs.com/svg.latex?s%28x%29%20%3D%20%28%5Cwidehat%7Bs%7D%5E%7B-1%7D%28x%29%29%27s_0%28%5Cwidehat%7Bs%7D%5E%7B-1%7D%28x%29%29)
 
 #### Tutorial
 - Cumulative Distribution Transform (CDT) tutorial [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/01_tutorial_cdt.ipynb)] [[nbviwer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/01_tutorial_cdt.ipynb)]
