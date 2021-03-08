@@ -22,7 +22,7 @@ from pytranskit.optrans.continuous.cdt import CDT
 #### Definition
 Let <img src="https://github.com/rohdelab/PyTransKit/blob/master/svg_equations/cdt1.svg" align=center> be a positive density function (PDF). The CDT of the PDF 
 <img src="https://github.com/rohdelab/PyTransKit/blob/master/svg_equations/cdt2.svg" align=center> 
-with respect to a reference PDF ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20s_0%28x%29%2C%20x%5Cin%5COmega_%7Bs_0%7D%5Csubseteq%5Cmathbb%7BR%7D) is given by the mass preserving function ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cwidehat%7Bs%7D%28x%29) that satisfies - 
+with respect to a reference PDF <img src="https://latex.codecogs.com/svg.latex?s_0(x),x\in\Omega_{s_0}\subset\mathbb{R}" title="s_0(x),x\in\Omega_{s_0}\subset\mathbb{R}" align=center/> is given by the mass preserving function ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cwidehat%7Bs%7D%28x%29) that satisfies - 
 
 ![forwardcdt1](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cint_%7B%5Cinf%28%5COmega_s%29%7D%5E%7B%5Chat%7Bs%7D%28x%29%7D%20s%28u%29du%20%3D%20%5Cint_%7B%5Cinf%28%5COmega_%7Bs_0%7D%29%7D%5E%7Bx%7D%20s_0%28u%29du)
 
