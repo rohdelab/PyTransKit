@@ -64,4 +64,9 @@ The inverse transform of the CDT <img src="https://latex.codecogs.com/svg.latex?
 
 ## Resources
 - External website http://imagedatascience.com/transport/
+- [The cumulative distribution transform and linear pattern classification](http://www.sciencedirect.com/science/article/pii/S1063520317300076)
+- [The Radon Cumulative Distribution Transform and Its Application to Image Classification](https://ieeexplore.ieee.org/document/7358128)
+- [A continuous linear optimal transport approach for pattern analysis in image datasets](https://www.sciencedirect.com/science/article/abs/pii/S0031320315003507)
+- [Radon cumulative distribution transform subspace modeling for image classification](https://arxiv.org/abs/2004.03669)
+- [Parametric Signal Estimation Using the Cumulative Distribution Transform](https://ieeexplore.ieee.org/abstract/document/9099391)
 
