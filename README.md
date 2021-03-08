@@ -24,19 +24,19 @@ Let ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cdpi%7B100%7D
 ![equation](https://latex.codecogs.com/svg.latex?s%28x%29) 
 with respect to a reference PDF ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20s_0%28x%29%2C%20x%5Cin%5COmega_%7Bs_0%7D%5Csubseteq%5Cmathbb%7BR%7D) is given by the mass preserving function ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cwidehat%7Bs%7D%28x%29) that satisfies - 
 
-![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cint_%7B%5Cinf%28%5COmega_s%29%7D%5E%7B%5Chat%7Bs%7D%28x%29%7D%20s%28u%29du%20%3D%20%5Cint_%7B%5Cinf%28%5COmega_%7Bs_0%7D%29%7D%5E%7Bx%7D%20s_0%28u%29du)
+![forwardcdt1](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cint_%7B%5Cinf%28%5COmega_s%29%7D%5E%7B%5Chat%7Bs%7D%28x%29%7D%20s%28u%29du%20%3D%20%5Cint_%7B%5Cinf%28%5COmega_%7Bs_0%7D%29%7D%5E%7Bx%7D%20s_0%28u%29du)
 
 which yields 
 
-![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cwidehat%7Bs%7D%28x%29%20%3D%20S%5E%7B-1%7D%28S_0%28x%29%29) ,
+![forwardcdt2](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cwidehat%7Bs%7D%28x%29%20%3D%20S%5E%7B-1%7D%28S_0%28x%29%29) ,
 
-where, ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20S%28x%29%20%3D%20%5Cint_%7B-%5Cinfty%7D%5E%7Bx%7D%20s%28u%29du)    and    
+where, ![cdf1](https://latex.codecogs.com/svg.latex?%5Cinline%20S%28x%29%20%3D%20%5Cint_%7B-%5Cinfty%7D%5E%7Bx%7D%20s%28u%29du)    and    
 
-![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20S_0%28x%29%20%3D%20%5Cint_%7B-%5Cinfty%7D%5E%7Bx%7D%20s_0%28u%29du)
+![cdf0](https://latex.codecogs.com/svg.latex?%5Cinline%20S_0%28x%29%20%3D%20%5Cint_%7B-%5Cinfty%7D%5E%7Bx%7D%20s_0%28u%29du)
 
 The inverse transform of the CDT ![equation](https://latex.codecogs.com/svg.latex?%5Cinline%20%5Cwidehat%7Bs%7D%28x%29) is given by,
 
-![equation](https://latex.codecogs.com/svg.latex?s%28x%29%20%3D%20%28%5Cwidehat%7Bs%7D%5E%7B-1%7D%28x%29%29%27s_0%28%5Cwidehat%7Bs%7D%5E%7B-1%7D%28x%29%29)
+![invcdt](https://latex.codecogs.com/svg.latex?s%28x%29%20%3D%20%28%5Cwidehat%7Bs%7D%5E%7B-1%7D%28x%29%29%27s_0%28%5Cwidehat%7Bs%7D%5E%7B-1%7D%28x%29%29)
 
 #### Tutorial
 - Cumulative Distribution Transform (CDT) tutorial [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/01_tutorial_cdt.ipynb)] [[nbviwer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/01_tutorial_cdt.ipynb)]
