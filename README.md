@@ -26,11 +26,11 @@ Let <img src="https://latex.codecogs.com/svg.latex?s(x),x\in\Omega_{s}\subset\ma
 
 which yields 
 
-<img src="https://latex.codecogs.com/svg.latex?\widehat{s}(t)&space;=&space;S^{-1}(S_0(t))" title="\widehat{s}(t) = S^{-1}(S_0(t))" align=center/>,
+<img src="https://latex.codecogs.com/svg.latex?\widehat{s}(t)&space;=&space;S^{-1}(S_0(t))" title="\widehat{s}(t) = S^{-1}(S_0(t))" align=center>,
 
-where, <img src="https://latex.codecogs.com/svg.latex?S(x)&space;=&space;\int_{-\infty}^{x}&space;s(u)du" title="S(x) = \int_{-\infty}^{x} s(u)du" align=center>    and    
+where, <img src="https://latex.codecogs.com/svg.latex?S(t)=\int_{-\infty}^{x}s(u)du" title="S(t)=\int_{-\infty}^{x}s(u)du" align=center>    and    
 
-<img src="https://latex.codecogs.com/svg.latex?S_0(x)&space;=&space;\int_{-\infty}^{x}&space;s_0(u)du" title="S_0(x) = \int_{-\infty}^{x} s_0(u)du" align=center>
+<img src="https://latex.codecogs.com/svg.latex?S_0(t)=\int_{-\infty}^{x}s_0(u)du" title="S_0(t)=\int_{-\infty}^{x}s_0(u)du" align=center>
 
 The inverse transform of the CDT <img src="https://latex.codecogs.com/svg.latex?\widehat{s}(x)" title="\widehat{s}(x)" align=center> is given by,
 
