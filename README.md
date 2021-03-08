@@ -28,7 +28,9 @@ which yields
 
 <img src="https://latex.codecogs.com/svg.latex?\widehat{s}(t)&space;=&space;S^{-1}(S_0(t))" title="\widehat{s}(t) = S^{-1}(S_0(t))" align=center>
 
-where, <img src="https://latex.codecogs.com/svg.latex?S(t)=\int_{-\infty}^{x}s(u)du" title="S(t)=\int_{-\infty}^{x}s(u)du" align=center>    and    <img src="https://latex.codecogs.com/svg.latex?S_0(t)=\int_{-\infty}^{x}s_0(u)du" title="S_0(t)=\int_{-\infty}^{x}s_0(u)du" align=center> .
+where, <img src="https://latex.codecogs.com/svg.latex?S(t)=\int_{-\infty}^{x}s(u)du" title="S(t)=\int_{-\infty}^{x}s(u)du" align=center>    and    
+
+<img src="https://latex.codecogs.com/svg.latex?S_0(t)=\int_{-\infty}^{x}s_0(u)du" title="S_0(t)=\int_{-\infty}^{x}s_0(u)du" align=center> .
 
 The inverse transform of the CDT <img src="https://latex.codecogs.com/svg.latex?\widehat{s}(x)" title="\widehat{s}(x)" align=center> is given by,
 
@@ -44,6 +46,15 @@ respect to <img src="https://latex.codecogs.com/svg.latex?s_0(\mathbf{x})" title
 
 <img src="https://latex.codecogs.com/svg.latex?\int_{-\infty}^{\widehat{s}(t,\theta)}\widetilde{s}(u,\theta)du=\int_{-\infty}^{t}\widetilde{s}_0(u,\theta)du,~~~\forall\theta\in[0,\pi]" title="\int_{-\infty}^{\widehat{s}(t,\theta)}\widetilde{s}(u,\theta)du=\int_{-\infty}^{t}\widetilde{s}_0(u,\theta)du,~~~\forall\theta\in[0,\pi]" align=center>
 
+where, the Radon transform of <img src="https://latex.codecogs.com/svg.latex?s(\mathbf{x})" title="s(\mathbf{x})" align=center> is given by
+
+<img src="https://latex.codecogs.com/svg.latex?\widetilde{s}(t,\theta)=\int_{\Omega_s}s(\mathbf{x})\delta(t-\mathbf{x}\cdot&space;\mathbf{\xi}_\theta)d\mathbf{x}" title="\widetilde{s}(t,\theta)=\int_{\Omega_s}s(\mathbf{x})\delta(t-\mathbf{x}\cdot \mathbf{\xi}_\theta)d\mathbf{x}" align=center> .
+
+The transformed signal in R-CDT space can be recovered via the following inverse formula:
+
+<img src="https://latex.codecogs.com/svg.latex?s(\mathbf{x})=\mathcal{R}^{-1}\left(\frac{\partial&space;\widehat{s}^{-1}(t,\theta)}{\partial&space;t}\widetilde{s}_0\left(\widehat{s}^{-1}(t,\theta),\theta\right)\right)" title="s(\mathbf{x})=\mathcal{R}^{-1}\left(\frac{\partial \widehat{s}^{-1}(t,\theta)}{\partial t}\widetilde{s}_0\left(\widehat{s}^{-1}(t,\theta),\theta\right)\right)" align=center> 
+
+where, <img src="https://latex.codecogs.com/svg.latex?\mathcal{R}^{-1}(.)" title="\mathcal{R}^{-1}(.)" align=center> denotes the inverse Radon transform.
 
 #### Tutorial
 - Radon-CDT tutorial [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/02_tutorial_rcdt.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/02_tutorial_rcdt.ipynb)]
