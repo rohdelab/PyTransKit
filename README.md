@@ -68,7 +68,7 @@ The Continuous Linear Optimal Transport (CLOT) transform <img src="https://latex
 
 Assuming that the density functions <img src="https://latex.codecogs.com/svg.latex?s_0,s" title="s_0,s" align=center> have finite second moments, there is an unique solution to the Monge optimal transport problem:
 
-min Monge <img src="https://latex.codecogs.com/svg.latex?(T)=\int_{R^d}\big|x-T(x)|^2s_0(x)dx" title="(T)=\int_{R^d}\big|x-T(x)|^2s_0(x)dx" align=center>
+<img src="https://latex.codecogs.com/svg.latex?\large&space;\min&space;Monge(T)=\int_{R^d}\big|x-T(x)|^2s_0(x)dx" title="\large \min Monge(T)=\int_{R^d}\big|x-T(x)|^2s_0(x)dx" align=center>
 
 s.t. <img src="https://latex.codecogs.com/svg.latex?\int_Bs(\mathbf{y})d\mathbf{y}=\int_{T^{-1}(B)}s_0(\mathbf{x})d\mathbf{x}" title="\int_Bs(\mathbf{y})d\mathbf{y}=\int_{T^{-1}(B)}s_0(\mathbf{x})d\mathbf{x}" align=center>, for all open <img src="https://latex.codecogs.com/svg.latex?B\subseteq\mathbb{R}^d" title="B\subseteq\mathbb{R}^d" align=center>
 
