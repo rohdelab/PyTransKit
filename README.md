@@ -62,6 +62,9 @@ where, <img src="https://latex.codecogs.com/svg.latex?\mathcal{R}^{-1}(.)" title
 
 ### Continuous Linear Optimal Transport Transform
 #### Definition
+The Continuous Linear Optimal Transport (CLOT) transform <img src="https://latex.codecogs.com/svg.latex?\widehat{s}(x)" title="\widehat{s}(x)" align=center> of a density function <img src="https://latex.codecogs.com/svg.latex?s(\mathbf{x})" title="s(\mathbf{x})" align=center> is defined as the optimal transport map from a reference density <img src="https://latex.codecogs.com/svg.latex?s_0(\mathbf&space;x)" title="s_0(\mathbf x)" align=center> to <img src="https://latex.codecogs.com/svg.latex?s(\mathbf{x})" title="s(\mathbf{x})" align=center>. Specifically, let <img src="https://latex.codecogs.com/svg.latex?s_0(\mathbf&space;x)" title="s_0(\mathbf x)" align=center>, <img src="https://latex.codecogs.com/svg.latex?s(\mathbf{x})" title="s(\mathbf{x})" align=center> be positive functions defined on domains <img src="https://latex.codecogs.com/svg.latex?\Omega_{s_0},&space;\Omega_{s}\subseteq&space;\mathbb&space;R^d" title="\Omega_{s_0}, \Omega_{s}\subseteq \mathbb R^d" align=center>, respectively and such that 
+
+<img src="https://latex.codecogs.com/svg.latex?\int_{\Omega_{s_0}}s_0(\mathbf&space;x)&space;d\mathbf&space;x&space;=&space;\int_{\Omega_{s_0}}s_0(\mathbf&space;x)&space;d\mathbf&space;x&space;=1&space;\quad&space;\text{(normalized)}" title="\int_{\Omega_{s_0}}s_0(\mathbf x) d\mathbf x = \int_{\Omega_{s_0}}s_0(\mathbf x) d\mathbf x =1 \quad \text{(normalized)}" align=center>.
 
 #### Tutorial
 - Continuous Linear Optimal Transport Transform (CLOT) tutorial [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/07_tutorial_clot.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/07_tutorial_clot.ipynb)]
