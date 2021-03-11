@@ -76,7 +76,7 @@ Any map <img src="https://latex.codecogs.com/svg.latex?\large&space;T" title="\l
 
 <img src="https://latex.codecogs.com/svg.latex?\large&space;s_0(x)=|\text{det}(\nabla&space;T(x))|s(T(x))" title="\large s_0(x)=|\text{det}(\nabla T(x))|s(T(x))" align=center>.
 
-The minimizer to the above Monge problem is called an optimal transport map. Given a fixed reference density <img src="https://latex.codecogs.com/svg.latex?\large&space;s_0" title="\large s_0" align=center>, the LOT transform <img src="https://latex.codecogs.com/svg.latex?\large&space;\widehat{s}" title="\large \widehat{s}" align=center> of a density function <img src="https://latex.codecogs.com/svg.latex?\large&space;s" title="\large s" align=center> is defined  to the unique optimal transport map from <img src="https://latex.codecogs.com/svg.latex?\large&space;s_0" title="\large s_0" align=center> to <img src="https://latex.codecogs.com/svg.latex?\large&space;s" title="\large s" align=center>.
+The minimizer to the above Monge problem is called an optimal transport map. Given a fixed reference density <img src="https://latex.codecogs.com/svg.latex?\large&space;s_0" title="\large s_0" align=center>, the LOT transform <img src="https://latex.codecogs.com/svg.latex?\large&space;\widehat{s}" title="\large \widehat{s}" align=center> of a density function <img src="https://latex.codecogs.com/svg.latex?\large&space;s" title="\large s" align=center> is defined  to the unique optimal transport map from <img src="https://latex.codecogs.com/svg.latex?\large&space;s_0" title="\large s_0" align=center> to <img src="https://latex.codecogs.com/svg.latex?\large&space;s" title="\large s" align=center>. Moreover Brenier [7] shows that any optimal transport map can be written as the gradient of a convex function, i.e., <img src="https://latex.codecogs.com/svg.latex?\large&space;\widehat{s}=\nabla\phi" title="\large \widehat{s}=\nabla\phi" align=center> where <img src="https://latex.codecogs.com/svg.latex?\large&space;\phi" title="\large \phi" align=center> is a convex function. Following the generic approach described in [8] Kolouri et al. [4] employed an iterative algorithm minimizing eqn. 1 with constraint eqn. 2 via the gradient descent idea.
 
 #### Tutorial
 - Continuous Linear Optimal Transport Transform (CLOT) tutorial [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/07_tutorial_clot.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/07_tutorial_clot.ipynb)]
@@ -92,10 +92,11 @@ The minimizer to the above Monge problem is called an optimal transport map. Giv
 - Time delay and linear dispersion estimation using CDT [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/Examples/Example02_estimation_delay_linear_dispersion.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/Examples/Example02_estimation_delay_linear_dispersion.ipynb)]
 
 ## Resources
-- External website http://imagedatascience.com/transport/
-- [The cumulative distribution transform and linear pattern classification](http://www.sciencedirect.com/science/article/pii/S1063520317300076)
-- [The Radon Cumulative Distribution Transform and Its Application to Image Classification](https://ieeexplore.ieee.org/document/7358128)
-- [A continuous linear optimal transport approach for pattern analysis in image datasets](https://www.sciencedirect.com/science/article/abs/pii/S0031320315003507)
-- [Radon cumulative distribution transform subspace modeling for image classification](https://arxiv.org/abs/2004.03669)
-- [Parametric Signal Estimation Using the Cumulative Distribution Transform](https://ieeexplore.ieee.org/abstract/document/9099391)
-
+1. External website http://imagedatascience.com/transport/
+2. [The cumulative distribution transform and linear pattern classification](http://www.sciencedirect.com/science/article/pii/S1063520317300076)
+3. [The Radon Cumulative Distribution Transform and Its Application to Image Classification](https://ieeexplore.ieee.org/document/7358128)
+4. [A continuous linear optimal transport approach for pattern analysis in image datasets](https://www.sciencedirect.com/science/article/abs/pii/S0031320315003507)
+5. [Radon cumulative distribution transform subspace modeling for image classification](https://arxiv.org/abs/2004.03669)
+6. [Parametric Signal Estimation Using the Cumulative Distribution Transform](https://ieeexplore.ieee.org/abstract/document/9099391)
+7. [Polar factorization and monotone rearrangement of vector-valued functions](https://onlinelibrary.wiley.com/doi/abs/10.1002/cpa.3160440402)
+8. [ Optimal mass transport for registration and warping](https://link.springer.com/article/10.1023/B:VISI.0000036836.66311.97)
