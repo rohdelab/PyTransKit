@@ -68,9 +68,15 @@ The Continuous Linear Optimal Transport (CLOT) transform <img src="https://latex
 
 Assuming that the density functions <img src="https://latex.codecogs.com/svg.latex?s_0,s" title="s_0,s" align=center> have finite second moments, there is an unique solution to the Monge optimal transport problem:
 
-<img src="https://latex.codecogs.com/svg.latex?\large&space;\min&space;Monge(T)=\int_{R^d}\big|x-T(x)|^2s_0(x)dx" title="\large \min Monge(T)=\int_{R^d}\big|x-T(x)|^2s_0(x)dx" align=center>
+<img src="https://latex.codecogs.com/svg.latex?\large&space;\min&space;Monge(T)=\int_{R^d}\big|x-T(x)|^2s_0(x)dx" title="\large \min Monge(T)=\int_{R^d}\big|x-T(x)|^2s_0(x)dx" align=center>  (eqn. 2)
 
-s.t. <img src="https://latex.codecogs.com/svg.latex?\int_Bs(\mathbf{y})d\mathbf{y}=\int_{T^{-1}(B)}s_0(\mathbf{x})d\mathbf{x}" title="\int_Bs(\mathbf{y})d\mathbf{y}=\int_{T^{-1}(B)}s_0(\mathbf{x})d\mathbf{x}" align=center>, for all open <img src="https://latex.codecogs.com/svg.latex?B\subseteq\mathbb{R}^d" title="B\subseteq\mathbb{R}^d" align=center>.
+s.t. <img src="https://latex.codecogs.com/svg.latex?\int_Bs(\mathbf{y})d\mathbf{y}=\int_{T^{-1}(B)}s_0(\mathbf{x})d\mathbf{x}" title="\int_Bs(\mathbf{y})d\mathbf{y}=\int_{T^{-1}(B)}s_0(\mathbf{x})d\mathbf{x}" align=center>, for all open <img src="https://latex.codecogs.com/svg.latex?B\subseteq\mathbb{R}^d" title="B\subseteq\mathbb{R}^d" align=center> (eqn. 2).
+
+Any map <img src="https://latex.codecogs.com/svg.latex?\large&space;T" title="\large T" align=center> satisfying constraint in eqn. 2 is called a transport (mass-preserving) map between <img src="https://latex.codecogs.com/svg.latex?\large&space;s_0" title="\large s_0" align=center> and <img src="https://latex.codecogs.com/svg.latex?\large&space;s" title="\large s" align=center>. In particular, when <img src="https://latex.codecogs.com/svg.latex?\large&space;T" title="\large T" align=center> is bijective and continuously differentiable, the mass-preserving constraint (eqn. 2) becomes
+
+<img src="https://latex.codecogs.com/svg.latex?\large&space;s_0(x)=|\text{det}(\nabla&space;T(x))|s(T(x))" title="\large s_0(x)=|\text{det}(\nabla T(x))|s(T(x))" align=center>.
+
+The minimizer to the above Monge problem is called an optimal transport map. Given a fixed reference density <img src="https://latex.codecogs.com/svg.latex?\large&space;s_0" title="\large s_0" align=center>, the LOT transform <img src="https://latex.codecogs.com/svg.latex?\large&space;\widehat{s}" title="\large \widehat{s}" align=center> of a density function <img src="https://latex.codecogs.com/svg.latex?\large&space;s" title="\large s" align=center> is defined  to the unique optimal transport map from <img src="https://latex.codecogs.com/svg.latex?\large&space;s_0" title="\large s_0" align=center> to <img src="https://latex.codecogs.com/svg.latex?\large&space;s" title="\large s" align=center>.
 
 #### Tutorial
 - Continuous Linear Optimal Transport Transform (CLOT) tutorial [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/07_tutorial_clot.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/07_tutorial_clot.ipynb)]
