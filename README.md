@@ -41,8 +41,6 @@ from pytranskit.optrans.continuous.cdt import CDT
 3. [A continuous linear optimal transport approach for pattern analysis in image datasets](https://www.sciencedirect.com/science/article/abs/pii/S0031320315003507)
 4. [Radon cumulative distribution transform subspace modeling for image classification](https://arxiv.org/abs/2004.03669)
 5. [Parametric Signal Estimation Using the Cumulative Distribution Transform](https://ieeexplore.ieee.org/abstract/document/9099391)
-6. [Polar factorization and monotone rearrangement of vector-valued functions](https://onlinelibrary.wiley.com/doi/abs/10.1002/cpa.3160440402)
-7. [ Optimal mass transport for registration and warping](https://link.springer.com/article/10.1023/B:VISI.0000036836.66311.97)
 
 ## Resources
 External website http://imagedatascience.com/transport/
