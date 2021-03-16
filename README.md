@@ -38,7 +38,7 @@ from pytranskit.optrans.continuous.cdt import CDT
 ## References
 1. [The cumulative distribution transform and linear pattern classification, Applied and Computational Harmonic Analysis, November 2018](http://www.sciencedirect.com/science/article/pii/S1063520317300076)
 2. [The Radon Cumulative Distribution Transform and Its Application to Image Classification, IEEE Transactions on Image Processing, December 2015](https://ieeexplore.ieee.org/document/7358128)
-3. [A continuous linear optimal transport approach for pattern analysis in image datasets, Pattern Recognition, March, 2016](https://www.sciencedirect.com/science/article/abs/pii/S0031320315003507)
+3. [A continuous linear optimal transport approach for pattern analysis in image datasets, Pattern Recognition, March 2016](https://www.sciencedirect.com/science/article/abs/pii/S0031320315003507)
 4. [Radon cumulative distribution transform subspace modeling for image classification, arXiv preprint, 2020](https://arxiv.org/abs/2004.03669)
 5. [Parametric Signal Estimation Using the Cumulative Distribution Transform, IEEE Transactions on Signal Processing, May 2020](https://ieeexplore.ieee.org/abstract/document/9099391)
 
