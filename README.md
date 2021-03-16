@@ -36,11 +36,11 @@ from pytranskit.optrans.continuous.cdt import CDT
 - Time delay and linear dispersion estimation using CDT [5] [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/Examples/Example02_estimation_delay_linear_dispersion.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/Examples/Example02_estimation_delay_linear_dispersion.ipynb)]
 
 ## References
-1. [The cumulative distribution transform and linear pattern classification](http://www.sciencedirect.com/science/article/pii/S1063520317300076)
-2. [The Radon Cumulative Distribution Transform and Its Application to Image Classification](https://ieeexplore.ieee.org/document/7358128)
-3. [A continuous linear optimal transport approach for pattern analysis in image datasets](https://www.sciencedirect.com/science/article/abs/pii/S0031320315003507)
-4. [Radon cumulative distribution transform subspace modeling for image classification](https://arxiv.org/abs/2004.03669)
-5. [Parametric Signal Estimation Using the Cumulative Distribution Transform](https://ieeexplore.ieee.org/abstract/document/9099391)
+1. [The cumulative distribution transform and linear pattern classification, Applied and Computational Harmonic Analysis, 2018](http://www.sciencedirect.com/science/article/pii/S1063520317300076)
+2. [The Radon Cumulative Distribution Transform and Its Application to Image Classification, IEEE Transactions on Image Processing 2015](https://ieeexplore.ieee.org/document/7358128)
+3. [A continuous linear optimal transport approach for pattern analysis in image datasets, Pattern Recognition, 2016](https://www.sciencedirect.com/science/article/abs/pii/S0031320315003507)
+4. [Radon cumulative distribution transform subspace modeling for image classification, arXiv preprint, 2020](https://arxiv.org/abs/2004.03669)
+5. [Parametric Signal Estimation Using the Cumulative Distribution Transform, IEEE Transactions on Signal Processing, 2020](https://ieeexplore.ieee.org/abstract/document/9099391)
 
 ## Resources
 External website http://imagedatascience.com/transport/
