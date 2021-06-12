@@ -19,7 +19,7 @@ from pytranskit.optrans.continuous.cdt import CDT
 
 ## Low Level Functions
 ### CDT, SCDT
-- Cumulative Distribution Transform (CDT) tutorial [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/01_tutorial_cdt.ipynb)] [[nbviwer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/01_tutorial_cdt.ipynb)]
+- Cumulative Distribution Transform (CDT) [1] tutorial [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/01_tutorial_cdt.ipynb)] [[nbviwer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/01_tutorial_cdt.ipynb)]
 - Signed Cumulative Distribution Transform (SCDT) tutorial [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/09_tutorial_SCDT_classification.ipynb)] [[nbviwer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/09_tutorial_SCDT_classification.ipynb)]
 ### R-CDT
 - Radon-CDT tutorial [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/02_tutorial_rcdt.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/02_tutorial_rcdt.ipynb)]
@@ -42,6 +42,7 @@ from pytranskit.optrans.continuous.cdt import CDT
 3. [A continuous linear optimal transport approach for pattern analysis in image datasets, Pattern Recognition, March 2016](https://www.sciencedirect.com/science/article/abs/pii/S0031320315003507)
 4. [Radon cumulative distribution transform subspace modeling for image classification, arXiv preprint, 2020](https://arxiv.org/abs/2004.03669)
 5. [Parametric Signal Estimation Using the Cumulative Distribution Transform, IEEE Transactions on Signal Processing, May 2020](https://ieeexplore.ieee.org/abstract/document/9099391)
+6. [The Signed Cumulative Distribution Transform for 1-D Signal Analysis and Classification, ArXiv 2021] (https://arxiv.org/abs/2106.02146)
 
 ## Resources
 External website http://imagedatascience.com/transport/
