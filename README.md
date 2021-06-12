@@ -42,7 +42,7 @@ from pytranskit.optrans.continuous.cdt import CDT
 3. [A continuous linear optimal transport approach for pattern analysis in image datasets, Pattern Recognition, March 2016](https://www.sciencedirect.com/science/article/abs/pii/S0031320315003507)
 4. [Radon cumulative distribution transform subspace modeling for image classification, arXiv preprint, 2020](https://arxiv.org/abs/2004.03669)
 5. [Parametric Signal Estimation Using the Cumulative Distribution Transform, IEEE Transactions on Signal Processing, May 2020](https://ieeexplore.ieee.org/abstract/document/9099391)
-6. [The Signed Cumulative Distribution Transform for 1-D Signal Analysis and Classification, ArXiv 2021] (https://arxiv.org/abs/2106.02146)
+6. [The Signed Cumulative Distribution Transform for 1-D Signal Analysis and Classification, ArXiv 2021](https://arxiv.org/abs/2106.02146)
 
 ## Resources
 External website http://imagedatascience.com/transport/
