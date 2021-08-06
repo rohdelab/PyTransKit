@@ -31,14 +31,14 @@ class SCDT:
     ----------
 
     reference: 1D array representing the reference density
-    x: domain of reference
+    x0: domain of reference
     reference_CDF: reference CDF
     xtilde: Domain of the reference's inverse CDF 
     reference_CDT_inverse: inverse CDF of reference
 
     """
 
-    def __init__(self, reference):
+    def __init__(self, reference, x0=None):
         """
         the reference (or the reference density) is normalized, its CDF its CDF's inverse are calculated
         """
@@ -47,8 +47,10 @@ class SCDT:
         self.reference = reference
         self.dim = len(reference)
         self.reference_CDF = np.cumsum(reference) #reference's CDF
-        self.x = np.linspace(0,1,self.dim) #Defining the domain of reference
-        self.xtilde = np.linspace(0,1,self.dim) #Domain of the references's inverse
+        self.x = np.linspace(0,1,self.dim) #Defining the domain of input signal
+        self.xtilde = np.linspace(0,1,self.dim) #Domain of the reference signal
+        if x0 is not None:
+            self.xtilde = x0
         self.reference_CDF_inverse = interp(self.xtilde,self.reference_CDF,self.x) #Inverse of the references's CDF
    
    
@@ -119,15 +121,18 @@ class SCDT:
         I = interp(self.x, Ihat, self.reference_CDF)
         return I
     
-    def stransform(self,I):
+    def stransform(self,I,x=None):
         """
         stransform calculates the transport transform (CDT) of a signal I for signals that may change sign
         input:
             The original density I
+            x -> domain of the density I
         output:
             The 4 components of the transform of signed signals: the CDT of the positive and the negative 
             part of I, and the total masses of the positive and the negative part of I            
         """
+        if x is not None:
+            self.x = x
         eps = np.finfo(float).eps
         #Calculate the positive part of I
         Ipos = np.array([(abs(s)+s)/2 for s in I]) 
