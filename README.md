@@ -30,7 +30,7 @@ from pytranskit.optrans.continuous.cdt import CDT
 
 ## Classification Examples
 - CDT Nearest Subspace (CDT-NS) classifier for 1D data [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/04_tutorial_CDT-NS_classifier.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/04_tutorial_CDT-NS_classifier.ipynb)]
-- SCDT Nearest Subspace (SCDT-NS) classifier for 1D data [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/11_tutorial_SCDT-NS_classifier.ipynb)] [[nbviewer](https://nbviewer.org/github/rohdelab/PyTransKit/blob/master/tutorials/11_tutorial_SCDT-NS_classifier.ipynb)]
+- SCDT Nearest Subspace (SCDT-NS) classifier for 1D data [8] [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/11_tutorial_SCDT-NS_classifier.ipynb)] [[nbviewer](https://nbviewer.org/github/rohdelab/PyTransKit/blob/master/tutorials/11_tutorial_SCDT-NS_classifier.ipynb)]
 - Radon-CDT Nearest Subspace (RCDT-NS) classifier for 2D data [4] [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/03_tutorial_RCDT-NS_classifier.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/03_tutorial_RCDT-NS_classifier.ipynb)]
 - 3D Radon-CDT Nearest Subspace (3D-RCDT-NS) classifier for 3D data [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/06_tutorial_3DRCDT-NS_classifier.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/06_tutorial_3DRCDT-NS_classifier.ipynb)]
 
@@ -50,6 +50,7 @@ from pytranskit.optrans.continuous.cdt import CDT
 5. [Parametric Signal Estimation Using the Cumulative Distribution Transform, IEEE Transactions on Signal Processing, May 2020](https://ieeexplore.ieee.org/abstract/document/9099391)
 6. [The Signed Cumulative Distribution Transform for 1-D Signal Analysis and Classification, ArXiv 2021](https://arxiv.org/abs/2106.02146)
 7. [Detecting and visualizing cell phenotype differences from microscopy images using transport-based morphometry, PNAS 2014](https://www.pnas.org/content/111/9/3448.short)
+8. [Nearest Subspace Search in the Signed Cumulative Distribution Transform Space for 1D Signal Classification, ArXiv 2021](https://arxiv.org/abs/2110.05606)
 
 ## Resources
 External website http://imagedatascience.com/transport/
