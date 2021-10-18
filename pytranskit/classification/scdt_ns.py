@@ -29,7 +29,7 @@ class SCDT_NS:
         Ttrain : [optional] array-like, shape (n_samples, n_columns)
             domain for corresponding training signals.
         no_deform_model : [optional] boolean flag; IF TRUE, no deformation model will be added
-            default = False.
+            default = True.
         """
         
         # calculate the SCDTs
