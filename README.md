@@ -54,3 +54,14 @@ from pytranskit.optrans.continuous.cdt import CDT
 
 ## Resources
 External website http://imagedatascience.com/transport/
+
+## Authors
+- Abu Hasnat Mohammad Rubaiyat
+- Mohammad Shifat E Rabbi
+- Liam Cattell
+- Xuwang Yin
+- Shiying Li
+- Yan Zhuang
+- Gustavo K. Rohde
+- Soheil Kolouri
+- Serim Park
