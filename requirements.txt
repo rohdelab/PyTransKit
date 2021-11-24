@@ -6,3 +6,5 @@ numpy
 bluepy
 nbsphinx
 IPython
+POT
+opencv-python
