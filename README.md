@@ -5,6 +5,7 @@ Website and documentation: https://pytranskit.readthedocs.io/
 
 This python package provides signal/image representation software methods (i.e. mathematical transforms) based on the idea of matching signals & images to a reference by pixel displacement operations that are physically related to the concept of transport phenomena. You can think of and use the transforms described below just as one would with the Fourier or Wavelet Transforms. By solving signal/image analysis in transport transform (e.g. Wasserstein embedding) space, one can dramatically simplify and linearize statistical regression problems, enabling the straight forward (e.g. closed form) solution of signal/image detection, estimation, and classification problems with increased accuracy using few training samples, with mathematical understanding and interpretability, better generalization properties, and computationally efficiently.
 
+![pytranskit_figure](https://user-images.githubusercontent.com/14927119/144302312-faf6e6fb-a2d9-4826-a2ec-1a37a4ea0b09.png)
 
 ## Installation
 The library could be installed through pip
