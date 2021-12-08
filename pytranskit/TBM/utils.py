@@ -12,7 +12,7 @@ import os
 from skimage.io import imread
 import glob
 import matplotlib.pyplot as plt
-
+from skimage.color import rgb2gray
 
 
 def load_image_data(data_dir):
@@ -32,7 +32,7 @@ def load_image_data(data_dir):
                     if ext == '*.mat':
                         x_data.append(loadmat(files)['image'])
                     else:
-                        x_data.append(imread(files))
+                        x_data.append(rgb2gray(imread(files)))
                     y_data.append(cl)
     if x_data == []:
         print('Wrong file format provided. File types supported: ')
