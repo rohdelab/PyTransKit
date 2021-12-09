@@ -1,5 +1,5 @@
 import numpy as np
-from scipy import interp
+from numpy import interp
 import matplotlib.pyplot as plt
 
 
