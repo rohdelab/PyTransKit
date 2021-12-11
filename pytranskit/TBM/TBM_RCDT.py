@@ -312,7 +312,7 @@ class RCDT_PLDA:
         radoncdt = RadonCDT(thetas)
         
         ## figure 1 of 3
-        viz_plda=np.zeros((dir_num,self.R,self.C*gI_num))
+        viz_plda=np.zeros((dir_num,self.C,self.R*gI_num))
         for a in range(dir_num):
             lamb=np.linspace(-SD_spread*np.std(plda_proj[:,a]),SD_spread*np.std(plda_proj[:,a]), num=gI_num)
             mode_var = np.zeros([gI_num,self.Rtr,self.Ctr])
