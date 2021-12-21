@@ -138,11 +138,17 @@ class SCDT:
         Ipos = np.array([(abs(s)+s)/2 for s in I]) 
         #Calculate the negative part of I
         Ineg = np.array([(abs(s)-s)/2 for s in I]) 
-        Iposhat = self.transform(Ipos) 
-        Ineghat = self.transform(Ineg)
+        if Ipos.sum()>0:
+            Iposhat = self.transform(Ipos) 
+        else:
+            Iposhat = np.zeros(len(Ipos))
+        if Ineg.sum()>0:
+            Ineghat = self.transform(Ineg)
+        else:
+            Ineghat = np.zeros(len(Ineg))
         return Iposhat, Ineghat, Ipos.sum(), Ineg.sum()
     
-    def istransform(self,Ipos,Ineg,Masspos,Massneg):
+    def istransform(self,Iposhat, Ineghat,Masspos,Massneg):
         """
         istrasform calculates the inverse of the stransform.
         input:
@@ -150,5 +156,14 @@ class SCDT:
         output:
             The original signal 
         """
-        return self.itransform(Ipos)*Masspos-self.itransform(Ineg)*Massneg
+        if Masspos>0.:
+            Ipos = self.itransform(Iposhat)*Masspos
+        else:
+            Ipos = np.zeros(len(Iposhat))
+        if Massneg>0.:
+            Ineg = self.itransform(Ineghat)*Massneg
+        else:
+            Ineg = np.zeros(len(Ineghat))
+        return Ipos - Ineg
+        #return self.itransform(Ipos)*Masspos-self.itransform(Ineg)*Massneg
 
