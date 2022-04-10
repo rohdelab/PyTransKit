@@ -25,7 +25,7 @@ from pytranskit.optrans.continuous.cdt import CDT
 
 ## Low Level Functions
 ### CDT, SCDT
-- Cumulative Distribution Transform (CDT) [1] tutorial [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/01_tutorial_cdt.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/01_tutorial_cdt.ipynb)]
+- Cumulative Distribution Transform (CDT) [1] tutorial [[video](https://youtu.be/khkSOleeEno)] [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/01_tutorial_cdt.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/01_tutorial_cdt.ipynb)]
 - Signed Cumulative Distribution Transform (SCDT) [6] tutorial [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/09_tutorial_SCDT_classification.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/09_tutorial_SCDT_classification.ipynb)]
 - SCDT tutorial with domain adaptation [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/10_tutorial_SCDT.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/10_tutorial_SCDT.ipynb)]
 ### R-CDT
