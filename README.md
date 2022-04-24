@@ -22,6 +22,7 @@ sys.path.append('path/to/pytranskit')
 
 from pytranskit.optrans.continuous.cdt import CDT
 ```
+Introduction [video](https://youtu.be/t9kyuBFJDDQ)
 
 ## Low Level Functions
 ### CDT, SCDT
