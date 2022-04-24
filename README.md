@@ -27,7 +27,7 @@ Introduction [video](https://youtu.be/t9kyuBFJDDQ)
 ## Low Level Functions
 ### CDT, SCDT
 - Cumulative Distribution Transform (CDT) [1] [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/01_tutorial_cdt.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/01_tutorial_cdt.ipynb)]
-    - Videos: [[CDT](https://youtu.be/khkSOleeEno)]
+    - Videos: [CDT (https://youtu.be/khkSOleeEno)],[Code (https://youtu.be/djmaMXp-Kxk)] 
 - Signed Cumulative Distribution Transform (SCDT) [6] tutorial [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/09_tutorial_SCDT_classification.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/09_tutorial_SCDT_classification.ipynb)]
 - SCDT tutorial with domain adaptation [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/10_tutorial_SCDT.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/10_tutorial_SCDT.ipynb)]
 ### R-CDT
