@@ -63,6 +63,7 @@ Introduction [video](https://youtu.be/t9kyuBFJDDQ)
 
 ## Resources
 External website http://imagedatascience.com/transport/
+Video [[tutorials](https://www.youtube.com/channel/UCpbZd2z-QmxZRYrvVrgHlcQ)]
 
 ## Authors
 - Abu Hasnat Mohammad Rubaiyat
