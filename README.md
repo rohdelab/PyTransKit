@@ -60,8 +60,8 @@ Introduction [video](https://youtu.be/t9kyuBFJDDQ)
 5. [Parametric Signal Estimation Using the Cumulative Distribution Transform, IEEE Transactions on Signal Processing, May 2020](https://ieeexplore.ieee.org/abstract/document/9099391)
 6. [The Signed Cumulative Distribution Transform for 1-D Signal Analysis and Classification, ArXiv 2021](https://arxiv.org/abs/2106.02146)
 7. [Detecting and visualizing cell phenotype differences from microscopy images using transport-based morphometry, PNAS 2014](https://www.pnas.org/content/111/9/3448.short)
-8. [Nearest Subspace Search in the Signed Cumulative Distribution Transform Space for 1D Signal Classification, ArXiv 2021](https://arxiv.org/abs/2110.05606)
-9. [End-to-End Signal Classification in Signed Cumulative Distribution Transform Space](https://arxiv.org/abs/2205.00348)
+8. [Nearest Subspace Search in the Signed Cumulative Distribution Transform Space for 1D Signal Classification, IEEE International Conference on Acoustics, Speech and Signal Processing, May 2022](https://arxiv.org/abs/2110.05606)
+9. [End-to-End Signal Classification in Signed Cumulative Distribution Transform Space, ArXiv 2022](https://arxiv.org/abs/2205.00348)
 
 ## Resources
 External website http://imagedatascience.com/transport/
