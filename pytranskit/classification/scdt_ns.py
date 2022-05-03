@@ -19,7 +19,7 @@ class SCDT_NS:
         self.len_subspace = 0
 
     def fit(self, Xtrain, Ytrain, Ttrain=None, no_deform_model=True):
-        """Fit linear model.
+        """Fit SCDT-NS.
         Parameters
         ----------
         Xtrain : array-like, shape (n_samples, n_columns)
@@ -76,7 +76,7 @@ class SCDT_NS:
 
 
     def predict(self, Xtest, Ttest=None, use_gpu=False):
-        """Predict using the linear model
+        """Predict using SCDT-NS
         Parameters
         ----------
         Xtest : array-like, shape (n_samples, n_columns)
