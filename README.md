@@ -11,11 +11,11 @@ This python package provides signal/image representation software methods (i.e. 
 ![pytranskit_figure](README_figures/pytranskit_figure.png)
 
 ## Installation
-The library could be installed through pip
+The library can be installed through pip
 ```
 pip install pytranskit
 ```
-Alternately, you could clone/download the repository and add the `pytranskit` directory to your Python path
+Alternately, you can clone/download the repository and add the `pytranskit` directory to your Python path
 ```
 import sys
 sys.path.append('path/to/pytranskit')
