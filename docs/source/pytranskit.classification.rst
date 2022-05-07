@@ -26,6 +26,22 @@ rcdt\_ns\_3d
    :undoc-members:
    :show-inheritance:
 
+scdt\_nls
+---------------------------------------------
+
+.. automodule:: pytranskit.classification.scdt_nls
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+scdt\_ns
+---------------------------------------------
+
+.. automodule:: pytranskit.classification.scdt_ns
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 utils
 --------------------------------------
 

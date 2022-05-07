@@ -6,6 +6,8 @@ API and modules
    :maxdepth: 4
 
    pytranskit.optrans.continuous
-   pytranskit.classification
+   pytranskit.optrans.decomposition
    pytranskit.optrans.utils
+   pytranskit.classification
+   pytranskit.TBM
 

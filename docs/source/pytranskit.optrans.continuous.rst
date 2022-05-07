@@ -46,3 +46,12 @@ radoncdt3D
    :members:
    :undoc-members:
    :show-inheritance:
+
+scdt
+-----------------------------------------------
+
+.. automodule:: pytranskit.optrans.continuous.scdt
+   :imported-members:
+   :members:
+   :undoc-members:
+   :show-inheritance:
