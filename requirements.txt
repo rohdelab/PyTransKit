@@ -9,3 +9,4 @@ IPython
 POT
 opencv-python
 matplotlib
+h5py
