@@ -2,7 +2,7 @@ pytranskit.optrans.continuous package
 =====================================
 
 
-base transform
+base transform - Base class for 2D optimal transport transform methods (e.g. CLOT, VOT2D).
 -----------------------------------------
 
 .. automodule:: pytranskit.optrans.continuous.base
@@ -11,7 +11,7 @@ base transform
    :undoc-members:
    :show-inheritance:
 
-cdt
+cdt - Cumulative Distribution Transform
 ----------------------------------------
 
 .. automodule:: pytranskit.optrans.continuous.cdt
@@ -20,7 +20,7 @@ cdt
    :undoc-members:
    :show-inheritance:
 
-clot
+clot - Continuous Linear Optimal Transport Transform
 -----------------------------------------
 
 .. automodule:: pytranskit.optrans.continuous.clot
@@ -29,7 +29,7 @@ clot
    :undoc-members:
    :show-inheritance:
 
-radoncdt
+radoncdt - Radon Cumulative Distribution Transform
 ---------------------------------------------
 
 .. automodule:: pytranskit.optrans.continuous.radoncdt
@@ -38,7 +38,7 @@ radoncdt
    :undoc-members:
    :show-inheritance:
 
-radoncdt3D
+radoncdt3D - 3D Radon Cumulative Distribution Transform
 -----------------------------------------------
 
 .. automodule:: pytranskit.optrans.continuous.radoncdt3D
@@ -47,7 +47,7 @@ radoncdt3D
    :undoc-members:
    :show-inheritance:
 
-scdt
+scdt - Signed Cumulative Distribution Transform
 -----------------------------------------------
 
 .. automodule:: pytranskit.optrans.continuous.scdt
