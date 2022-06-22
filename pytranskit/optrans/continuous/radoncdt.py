@@ -1,3 +1,4 @@
+import inspect
 import numpy as np
 from skimage.transform import radon, iradon
 
@@ -168,7 +169,10 @@ class RadonCDT(BaseTransform):
             rad0[:,i] = cdt.apply_forward_map(transport_map[:,i], j1)
 
         # Inverse Radon transform
-        sig0_recon = iradon(rad0, self.theta, circle=False, filter='ramp')
+        if 'filter_name' in inspect.signature(iradon).parameters:
+            sig0_recon = iradon(rad0, self.theta, circle=False, filter_name='ramp')
+        else:
+            sig0_recon = iradon(rad0, self.theta, circle=False, filter='ramp')
 
         # Crop sig0_recon to match sig1
         sig0_recon = match_shape2d(sig1, sig0_recon)
@@ -222,7 +226,10 @@ class RadonCDT(BaseTransform):
             rad1[:,i] = cdt.apply_inverse_map(transport_map[:,i], j0, x)
 
         # Inverse Radon transform
-        sig1_recon = iradon(rad1, self.theta, circle=False, filter='ramp')
+        if 'filter_name' in inspect.signature(iradon).parameters:
+            sig1_recon = iradon(rad1, self.theta, circle=False, filter_name='ramp')
+        else:
+            sig1_recon = iradon(rad1, self.theta, circle=False, filter='ramp')
 
         # Crop sig1_recon to match sig0
         sig1_recon = match_shape2d(sig0, sig1_recon)
