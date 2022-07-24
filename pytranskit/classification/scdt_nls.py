@@ -200,9 +200,9 @@ class SCDT_NLS:
         Ipos, Ineg, Imasspos, Imassneg = scdt.stransform(sig1, t1)
         
         if self.rm_edge:
-            shat = np.concatenate((Ipos[1:-2],Ineg[1:-2]),axis=0)
+            shat = np.concatenate((Ipos[1:-2],Ineg[1:-2],Imasspos.reshape(1),Imassneg.reshape(1)),axis=0)
         else:
-            shat = np.concatenate((Ipos[:-1],Ineg[:-1]),axis=0)
+            shat = np.concatenate((Ipos[:-1],Ineg[:-1],Imasspos.reshape(1),Imassneg.reshape(1)),axis=0)
         return shat
     
     def find_kN(self, X, y, k_range, n_range):
