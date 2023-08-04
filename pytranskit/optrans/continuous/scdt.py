@@ -177,5 +177,5 @@ class SCDT:
             shat = np.concatenate((Ipos[1:-2],Ineg[1:-2]),axis=0)
         else:
             shat = np.concatenate((Ipos[:-1],Ineg[:-1]),axis=0)
-        return shat
+        return shat,Imasspos, Imassneg
 
