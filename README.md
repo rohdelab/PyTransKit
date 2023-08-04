@@ -70,7 +70,7 @@ Introduction [video](https://youtu.be/t9kyuBFJDDQ)
 7. [Detecting and visualizing cell phenotype differences from microscopy images using transport-based morphometry, PNAS 2014](https://www.pnas.org/content/111/9/3448.short)
 8. [Nearest Subspace Search in the Signed Cumulative Distribution Transform Space for 1D Signal Classification, IEEE International Conference on Acoustics, Speech and Signal Processing, May 2022](https://arxiv.org/abs/2110.05606)
 9. [End-to-End Signal Classification in Signed Cumulative Distribution Transform Space, ArXiv 2022](https://arxiv.org/abs/2205.00348)
-10.[Gong, L., Li, S., Pathan, N. S., Rohde, G. K., Rubaiyat, A. H. M., & Thareja, S. (2023). The Radon Signed Cumulative Distribution Transform and its applications in classification of Signed Images. arXiv preprint arXiv:2307.15339.]
+10. [Gong, L., Li, S., Pathan, N. S., Rohde, G. K., Rubaiyat, A. H. M., & Thareja, S. (2023). The Radon Signed Cumulative Distribution Transform and its applications in classification of Signed Images. arXiv preprint arXiv:2307.15339.](https://arxiv.org/abs/2307.15339)
 ## Resources
 External website http://imagedatascience.com/transport/
 
