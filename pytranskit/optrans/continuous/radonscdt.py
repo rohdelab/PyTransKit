@@ -28,7 +28,9 @@ class RadonSCDT(BaseTransform):
     
     References
     ----------
-    
+    Gong, L., Li, S., Pathan, N. S., Rohde, G. K., Rubaiyat, A. H. M., & Thareja, S. (2023). 
+    "The Radon Signed Cumulative Distribution Transform and its applications in classification of Signed Images."
+    arXiv preprint arXiv:2307.15339.
     """
     def __init__(self, theta=np.arange(180)):
         super(RadonSCDT, self).__init__()
