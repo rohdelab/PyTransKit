@@ -15,7 +15,7 @@ import numpy as np
 import numpy.linalg as LA
 import multiprocessing as mp
 
-from npytranskit.optrans.continuous.radonscdt import RadonSCDT
+from pytranskit.optrans.continuous.radonscdt import RadonSCDT
 
 eps = 1e-6
 x0_range = [0, 1]
