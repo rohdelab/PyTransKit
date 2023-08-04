@@ -148,7 +148,7 @@ class SCDT_NS:
             shat = np.concatenate((Ipos[1:-2],Ineg[1:-2]),axis=0)
         else:
             shat = np.concatenate((Ipos[:-1],Ineg[:-1]),axis=0)
-        return shat, Imasspos, Imassneg 
+        return shat
         
     def add_trans_samples(self, scdt_features):
         # scdt_features: (n_samples, scdt)
