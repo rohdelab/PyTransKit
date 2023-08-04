@@ -2,13 +2,13 @@
 """
 Created on Tue Jan 17 14:41:20 2023
 
-@author: HP
-"""
-# -*- coding: utf-8 -*-
-"""
-Created on Fri Jan 13 23:58:20 2023
+@author: Naqib Sad Pathan
 
-@author: HP
+Reference
+
+Gong, L., Li, S., Pathan, N. S., Rohde, G. K., Rubaiyat, A. H. M., & Thareja, S. (2023). 
+"The Radon Signed Cumulative Distribution Transform and its applications in classification of Signed Images."
+arXiv preprint arXiv:2307.15339.
 """
 
 import numpy as np
