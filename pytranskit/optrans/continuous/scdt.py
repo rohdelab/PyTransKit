@@ -166,4 +166,16 @@ class SCDT:
             Ineg = np.zeros(len(Ineghat))
         return Ipos - Ineg
         #return self.itransform(Ipos)*Masspos-self.itransform(Ineg)*Massneg
+    def calc_scdt(self, sig1, t1, s0, t0):
+        # sig1: (0, columns)
+        # t1: domain of sig1
+        
+        scdt = SCDT(reference=s0,x0=t0)
+        Ipos, Ineg, Imasspos, Imassneg = scdt.stransform(sig1, t1)
+        
+        if self.rm_edge:
+            shat = np.concatenate((Ipos[1:-2],Ineg[1:-2]),axis=0)
+        else:
+            shat = np.concatenate((Ipos[:-1],Ineg[:-1]),axis=0)
+        return shat
 
