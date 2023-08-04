@@ -36,8 +36,8 @@ Introduction [video](https://youtu.be/t9kyuBFJDDQ)
 - Radon-CDT tutorial [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/02_tutorial_rcdt.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/02_tutorial_rcdt.ipynb)]
 - 3D Radon-CDT tutorial [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/05_tutorial_rcdt3D.ipynb)][[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/05_tutorial_rcdt3D.ipynb)]
 ### RSCDT
-- RSCDT tutorial : Forward and Inverse Transform [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/14_RSCDT-Forward%20and%20inverse%20transform%20.ipynb)]
-- RSCDT based nearest subspace method for image classification
+- RSCDT tutorial : Forward and Inverse Transform [10][[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/14_RSCDT-Forward%20and%20inverse%20transform%20.ipynb)]
+- RSCDT based nearest subspace method for image classification [10].
   [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/15_RSCDT_tutorial.ipynb)]
 ### CLOT
 - Continuous Linear Optimal Transport Transform (CLOT) tutorial [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/07_tutorial_clot.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/07_tutorial_clot.ipynb)]
@@ -49,7 +49,7 @@ Introduction [video](https://youtu.be/t9kyuBFJDDQ)
 - Radon-CDT Nearest Subspace (RCDT-NS) classifier for 2D data [4] [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/03_tutorial_RCDT-NS_classifier.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/03_tutorial_RCDT-NS_classifier.ipynb)]
 - 3D Radon-CDT Nearest Subspace (3D-RCDT-NS) classifier for 3D data [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/06_tutorial_3DRCDT-NS_classifier.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/06_tutorial_3DRCDT-NS_classifier.ipynb)]
 - Discrete Radon-CDT Nearest Subspace classifier for illumination-invariant Face Recognition [[notebook](https://github.com/rohdelab/drcdt_face)]
--  RSCDT based nearest subspace method for image classification
+-  RSCDT based nearest subspace method for image classification [10].
   [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/15_RSCDT_tutorial.ipynb)]
 
 ## Estimation Examples
@@ -70,7 +70,7 @@ Introduction [video](https://youtu.be/t9kyuBFJDDQ)
 7. [Detecting and visualizing cell phenotype differences from microscopy images using transport-based morphometry, PNAS 2014](https://www.pnas.org/content/111/9/3448.short)
 8. [Nearest Subspace Search in the Signed Cumulative Distribution Transform Space for 1D Signal Classification, IEEE International Conference on Acoustics, Speech and Signal Processing, May 2022](https://arxiv.org/abs/2110.05606)
 9. [End-to-End Signal Classification in Signed Cumulative Distribution Transform Space, ArXiv 2022](https://arxiv.org/abs/2205.00348)
-
+10.[Gong, L., Li, S., Pathan, N. S., Rohde, G. K., Rubaiyat, A. H. M., & Thareja, S. (2023). The Radon Signed Cumulative Distribution Transform and its applications in classification of Signed Images. arXiv preprint arXiv:2307.15339.]
 ## Resources
 External website http://imagedatascience.com/transport/
 
