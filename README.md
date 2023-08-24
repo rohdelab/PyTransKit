@@ -55,7 +55,7 @@ Introduction [video](https://youtu.be/t9kyuBFJDDQ)
 ## Estimation Examples
 - Time delay estimation using CDT [5] [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/Examples/Example01_estimation_delay.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/Examples/Example01_estimation_delay.ipynb)]
 - Time delay and linear dispersion estimation using CDT [5] [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/Examples/Example02_estimation_delay_linear_dispersion.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/Examples/Example02_estimation_delay_linear_dispersion.ipynb)]
-- PDE system identification using the SCDT [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/Examples/Example_PDE_system_identification.ipynb)] [[nbviewer](https://nbviewer.org/github/rohdelab/PyTransKit/blob/master/Examples/Example_PDE_system_identification.ipynb)]
+- PDE system identification using the SCDT [11] [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/Examples/Example_PDE_system_identification.ipynb)] [[nbviewer](https://nbviewer.org/github/rohdelab/PyTransKit/blob/master/Examples/Example_PDE_system_identification.ipynb)]
 
 ## Transport-based Morphometry
 - Transport-based Morphometry to detect and visualize cell phenotype differences [7] [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/08_tutorial_TBM.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/08_tutorial_TBM.ipynb)]
@@ -70,8 +70,9 @@ Introduction [video](https://youtu.be/t9kyuBFJDDQ)
 6. [The Signed Cumulative Distribution Transform for 1-D Signal Analysis and Classification, ArXiv 2021](https://arxiv.org/abs/2106.02146)
 7. [Detecting and visualizing cell phenotype differences from microscopy images using transport-based morphometry, PNAS 2014](https://www.pnas.org/content/111/9/3448.short)
 8. [Nearest Subspace Search in the Signed Cumulative Distribution Transform Space for 1D Signal Classification, IEEE International Conference on Acoustics, Speech and Signal Processing, May 2022](https://arxiv.org/abs/2110.05606)
-9. [End-to-End Signal Classification in Signed Cumulative Distribution Transform Space, ArXiv 2022](https://arxiv.org/abs/2205.00348)
-10. [Gong, L., Li, S., Pathan, N. S., Rohde, G. K., Rubaiyat, A. H. M., & Thareja, S. (2023). The Radon Signed Cumulative Distribution Transform and its applications in classification of Signed Images. arXiv preprint arXiv:2307.15339.](https://arxiv.org/abs/2307.15339)
+9. [End-to-End Signal Classification in Signed Cumulative Distribution Transform Space, arXiv 2022](https://arxiv.org/abs/2205.00348)
+10. [The Radon Signed Cumulative Distribution Transform and its applications in classification of Signed Images, arXiv 2023.](https://arxiv.org/abs/2307.15339)
+11. [System Identification Using the Signed Cumulative Distribution Transform In Structural Health Monitoring Applications, arXiv 2023](https://arxiv.org/abs/2308.12259)
 ## Resources
 External website http://imagedatascience.com/transport/
 
