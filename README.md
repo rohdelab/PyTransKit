@@ -59,7 +59,7 @@ Introduction [video](https://youtu.be/t9kyuBFJDDQ)
 
 ## Transport-based Morphometry
 - Transport-based Morphometry to detect and visualize cell phenotype differences [7] [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/08_tutorial_TBM.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/08_tutorial_TBM.ipynb)]
-
+- Predictive modeling of hematoma expansion from non-contrast computed tomography in spontaneous intracerebral hemorrhage patients [12] [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/08_tutorial_TBM.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/08_tutorial_TBM.ipynb)]
 
 ## References
 1. [The cumulative distribution transform and linear pattern classification, Applied and Computational Harmonic Analysis, November 2018](http://www.sciencedirect.com/science/article/pii/S1063520317300076)
@@ -73,6 +73,7 @@ Introduction [video](https://youtu.be/t9kyuBFJDDQ)
 9. [End-to-End Signal Classification in Signed Cumulative Distribution Transform Space, arXiv 2022](https://arxiv.org/abs/2205.00348)
 10. [The Radon Signed Cumulative Distribution Transform and its applications in classification of Signed Images, arXiv 2023.](https://arxiv.org/abs/2307.15339)
 11. [System Identification Using the Signed Cumulative Distribution Transform In Structural Health Monitoring Applications, arXiv 2023](https://arxiv.org/abs/2308.12259)
+12. [Predictive modeling of hematoma expansion from non-contrast computed tomography in spontaneous intracerebral hemorrhage patients, medRxiv 2024](https://www.medrxiv.org/content/10.1101/2024.05.14.24307384v2)
 ## Resources
 External website http://imagedatascience.com/transport/
 
