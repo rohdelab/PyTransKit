@@ -9,7 +9,7 @@ Imaging and Data Science Lab
 import numpy as np
 from scipy import ndimage
 from scipy.ndimage.interpolation import rotate
-from sklearn.decomposition.pca import PCA
+from sklearn.decomposition import PCA
 
 from skimage.filters import threshold_otsu
 
