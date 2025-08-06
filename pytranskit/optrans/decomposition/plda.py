@@ -328,7 +328,7 @@ class PLDA(BaseEstimator):
         """
         scores = self.decision_function(X)
         if len(scores.shape) == 1:
-            ind = (scores > 0).astype(np.int)
+            ind = (scores > 0).astype(int)
         else:
             ind = scores.argmax(axis=1)
 
