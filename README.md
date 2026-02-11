@@ -41,6 +41,7 @@ Introduction [video](https://youtu.be/t9kyuBFJDDQ)
   [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/15_RSCDT_tutorial.ipynb)]
 ### CLOT
 - Continuous Linear Optimal Transport Transform (CLOT) tutorial [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/07_tutorial_clot.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/07_tutorial_clot.ipynb)]
+- Continuous Linear Optimal Transport Transform 3D tutorial [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/18_tutorial_clot3d.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/18_tutorial_clot3d.ipynb)]
 
 ## Classification Examples
 - CDT Nearest Subspace (CDT-NS) classifier for 1D data [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/04_tutorial_CDT-NS_classifier.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/04_tutorial_CDT-NS_classifier.ipynb)]
@@ -60,6 +61,7 @@ Introduction [video](https://youtu.be/t9kyuBFJDDQ)
 ## Transport-based Morphometry
 - Transport-based Morphometry to detect and visualize cell phenotype differences [7] [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/08_tutorial_TBM.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/08_tutorial_TBM.ipynb)]
 - Predictive modeling of hematoma expansion from non-contrast computed tomography in spontaneous intracerebral hemorrhage patients [12] [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/08_tutorial_TBM.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/08_tutorial_TBM.ipynb)]
+- Discovery and visualization of structural biomarkers from MRI using transport-based morphometry [13] [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/17_tutorial_3DTBM.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/17_tutorial_3DTBM.ipynb)]
 
 ## References
 1. [The cumulative distribution transform and linear pattern classification, Applied and Computational Harmonic Analysis, November 2018](http://www.sciencedirect.com/science/article/pii/S1063520317300076)
@@ -74,6 +76,7 @@ Introduction [video](https://youtu.be/t9kyuBFJDDQ)
 10. [The Radon Signed Cumulative Distribution Transform and its applications in classification of Signed Images, arXiv 2023.](https://arxiv.org/abs/2307.15339)
 11. [System Identification Using the Signed Cumulative Distribution Transform In Structural Health Monitoring Applications, arXiv 2023](https://arxiv.org/abs/2308.12259)
 12. [Predictive modeling of hematoma expansion from non-contrast computed tomography in spontaneous intracerebral hemorrhage patients, medRxiv 2024](https://www.medrxiv.org/content/10.1101/2024.05.14.24307384v2)
+13. [Discovery and visualization of structural biomarkers from MRI using transport-based morphometry, NeuroImage 2018](https://www.sciencedirect.com/science/article/pii/S1053811917309151)
 ## Resources
 External website http://imagedatascience.com/transport/
 
