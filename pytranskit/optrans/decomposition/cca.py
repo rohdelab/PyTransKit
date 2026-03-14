@@ -101,12 +101,12 @@ class CCA():
 
         self.components_ = self.cca.x_weights_.T
         self.components_y_ = self.cca.y_weights_.T
-        self.mean_ = self.cca.x_mean_
-        self.mean_y_ = self.cca.y_mean_
+        # self.mean_ = self.cca.x_mean_
+        # self.mean_y_ = self.cca.y_mean_
 
-        # Get the explained variance of the transformed data
-        self.explained_variance_ = self.cca.x_scores_.var(axis=0)
-        self.explained_variance_y_ = self.cca.y_scores_.var(axis=0)
+        # # Get the explained variance of the transformed data
+        # self.explained_variance_ = self.cca.x_scores_.var(axis=0)
+        # self.explained_variance_y_ = self.cca.y_scores_.var(axis=0)
 
         self.is_fitted = True
         return
@@ -136,10 +136,10 @@ class CCA():
         X = check_array(X, ndim=2, dtype='numeric', force_all_finite=True)
 
         if Y is None:
-            return self.cca.transform(X, Y=None, copy=True)
+            return self.cca.transform(X, y=None, copy=True)
         else:
             Y = check_array(Y, ndim=2, dtype='numeric', force_all_finite=True)
-            X_new, Y_new = self.cca.transform(X, Y=Y, copy=True)
+            X_new, Y_new = self.cca.transform(X, Y, copy=True)
 
             # If n_components=1, reshape Y_new so it is 2D
             if self.n_components_ == 1:
