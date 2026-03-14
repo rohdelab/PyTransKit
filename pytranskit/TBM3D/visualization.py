@@ -147,7 +147,7 @@ def visual_roc(plda_proj_tr,train_labels,plda_proj_te,test_labels):
 
     return auc
 
-def show_3d_arrays(arrs, axis=2, cmap='gray', stds = [-2,-1,0,1,2], titles = None):
+def show_3d_arrays(arrs, axis=2, cmap='gray', stds = [-2,-1,0,1,2], titles = None, fontsize = 18):
     '''
     Visualize 3D arrays by slicing along a specified axis.
     Input:
@@ -182,12 +182,12 @@ def show_3d_arrays(arrs, axis=2, cmap='gray', stds = [-2,-1,0,1,2], titles = Non
             plt.imshow(ims[j,:,:], cmap=cmap, vmin=global_min, vmax=global_max, aspect='equal') 
             if titles is not None:
                 if len(titles) == 5:
-                    plt.title(titles[j], fontsize=18*ratio)
+                    plt.title(titles[j], fontsize=fontsize*ratio)
                 else:
                     if j == 2:
-                        plt.title(titles[0], fontsize=18*ratio)
+                        plt.title(titles[0], fontsize=fontsize*ratio)
             else: 
-                plt.title(f'{stds[j]} \u03C3, Slice {i}', fontsize=18*ratio)
+                plt.title(f'{stds[j]} \u03C3, Slice {i}', fontsize=fontsize*ratio)
             plt.axis('off')
         plt.subplots_adjust(wspace=0, hspace=0)
         plt.tight_layout(pad=0)  
