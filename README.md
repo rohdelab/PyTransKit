@@ -61,7 +61,7 @@ Introduction [video](https://youtu.be/t9kyuBFJDDQ)
 ## Transport-based Morphometry
 - Transport-based Morphometry to detect and visualize cell phenotype differences [7] [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/08_tutorial_TBM.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/08_tutorial_TBM.ipynb)]
 - Predictive modeling of hematoma expansion from non-contrast computed tomography in spontaneous intracerebral hemorrhage patients [12] [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/08_tutorial_TBM.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/08_tutorial_TBM.ipynb)]
-- Discovery and visualization of structural biomarkers from MRI using transport-based morphometry [13] [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/17_tutorial_3DTBM.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/17_tutorial_3DTBM.ipynb)]
+- Discovery and visualization of structural biomarkers from MRI using transport-based morphometry [13, 14] [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/17_tutorial_3DTBM.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/17_tutorial_3DTBM.ipynb)]
 
 ## References
 1. [The cumulative distribution transform and linear pattern classification, Applied and Computational Harmonic Analysis, November 2018](http://www.sciencedirect.com/science/article/pii/S1063520317300076)
@@ -77,6 +77,7 @@ Introduction [video](https://youtu.be/t9kyuBFJDDQ)
 11. [System Identification Using the Signed Cumulative Distribution Transform In Structural Health Monitoring Applications, arXiv 2023](https://arxiv.org/abs/2308.12259)
 12. [Predictive modeling of hematoma expansion from non-contrast computed tomography in spontaneous intracerebral hemorrhage patients, medRxiv 2024](https://www.medrxiv.org/content/10.1101/2024.05.14.24307384v2)
 13. [Discovery and visualization of structural biomarkers from MRI using transport-based morphometry, NeuroImage 2018](https://www.sciencedirect.com/science/article/pii/S1053811917309151)
+14. [3D Transport-based Morphometry (3D-TBM) for medical image analysis, arXiv 2026](https://arxiv.org/abs/2602.07260)
 ## Resources
 External website http://imagedatascience.com/transport/
 
