@@ -43,7 +43,9 @@ Introduction [video](https://youtu.be/t9kyuBFJDDQ)
 - Continuous Linear Optimal Transport Transform (CLOT) tutorial [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/07_tutorial_clot.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/07_tutorial_clot.ipynb)]
 - Continuous Linear Optimal Transport Transform 3D tutorial [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/18_tutorial_clot3d.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/18_tutorial_clot3d.ipynb)]
 
-## Classification Examples
+## Applications
+
+### Classification Examples
 - CDT Nearest Subspace (CDT-NS) classifier for 1D data [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/04_tutorial_CDT-NS_classifier.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/04_tutorial_CDT-NS_classifier.ipynb)]
 - SCDT Nearest Subspace (SCDT-NS) classifier for 1D data [8] [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/11_tutorial_SCDT-NS_classifier.ipynb)] [[nbviewer](https://nbviewer.org/github/rohdelab/PyTransKit/blob/master/tutorials/11_tutorial_SCDT-NS_classifier.ipynb)]
 - SCDT Nearest Local Subspace (SCDT-NLS) classifier for 1D data [9] [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/13_tutorial_SCDT-NLS_classifier.ipynb)] [[nbviewer](https://nbviewer.org/github/rohdelab/PyTransKit/blob/master/tutorials/13_tutorial_SCDT-NLS_classifier.ipynb)]
@@ -53,12 +55,12 @@ Introduction [video](https://youtu.be/t9kyuBFJDDQ)
 -  RSCDT based nearest subspace method for image classification [10].
   [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/15_RSCDT_tutorial.ipynb)]
 
-## Estimation Examples
+### Estimation Examples
 - Time delay estimation using CDT [5] [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/Examples/Example01_estimation_delay.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/Examples/Example01_estimation_delay.ipynb)]
 - Time delay and linear dispersion estimation using CDT [5] [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/Examples/Example02_estimation_delay_linear_dispersion.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/Examples/Example02_estimation_delay_linear_dispersion.ipynb)]
 - PDE system identification using the SCDT [11] [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/Examples/Example_PDE_system_identification.ipynb)] [[nbviewer](https://nbviewer.org/github/rohdelab/PyTransKit/blob/master/Examples/Example_PDE_system_identification.ipynb)]
 
-## Transport-based Morphometry
+### Transport-based Morphometry
 - Transport-based Morphometry to detect and visualize cell phenotype differences [7] [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/08_tutorial_TBM.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/08_tutorial_TBM.ipynb)]
 - Predictive modeling of hematoma expansion from non-contrast computed tomography in spontaneous intracerebral hemorrhage patients [12] [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/08_tutorial_TBM.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/08_tutorial_TBM.ipynb)]
 - Discovery and visualization of structural biomarkers from MRI using transport-based morphometry [13, 14] [[notebook](https://github.com/rohdelab/PyTransKit/blob/master/tutorials/17_tutorial_3DTBM.ipynb)] [[nbviewer](https://nbviewer.jupyter.org/github/rohdelab/PyTransKit/blob/master/tutorials/17_tutorial_3DTBM.ipynb)]
