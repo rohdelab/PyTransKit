@@ -1,0 +1,15 @@
+# Make settings for GPExpand 
+COMPILER=cl 
+COMPFLAGS=/c /GR /W3 /EHs /nologo /MD -I"C:\Program Files\MATLAB\R2015a\extern\include" -I"C:\Program Files\MATLAB\R2015a\simulink\include"  /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0  /DMATLAB_MEX_FILE /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0  /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE 
+OPTIMFLAGS=/O2 /Oy- /DNDEBUG 
+DEBUGFLAGS=/Z7 
+LINKER=link 
+LINKFLAGS=/nologo /manifest /export:mexFunction /DLL  /LIBPATH:"C:\Program Files\MATLAB\R2015a\extern\lib\win64\microsoft" libmx.lib libmex.lib libmat.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /EXPORT:mexFunction 
+LINKOPTIMFLAGS=
+LINKDEBUGFLAGS=/debug /PDB:".\GPExpand_mex.mexw64.pdb" 
+MATLAB_ARCH=win64
+BORLAND=
+OMPFLAGS= 
+OMPLINKFLAGS= 
+EMC_COMPILER=msvcsdk
+EMC_CONFIG=optim

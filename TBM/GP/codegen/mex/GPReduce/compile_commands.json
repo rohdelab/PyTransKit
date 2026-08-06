@@ -1,0 +1,68 @@
+[
+  {
+    "directory": "/Users/natasha/Downloads/TBM_software/TBM/GP/codegen/mex/GPReduce",
+    "command": "/usr/bin/xcrun -sdk macosx12.3 clang -fno-common -arch x86_64 -mmacosx-version-min=10.15 -fexceptions -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \".\" -I \"/Users/natasha/Downloads/TBM_software/TBM/GP\" -I \"./interface\" -I \"/Applications/MATLAB_R2022a.app/extern/include\" -I \".\" -DMODEL=GPReduce -c  GPReduce_data.c -o build/maci64/GPReduce_data.o",
+    "file": "GPReduce_data.c",
+    "output": "build/maci64/GPReduce_data.o"
+  },
+  {
+    "directory": "/Users/natasha/Downloads/TBM_software/TBM/GP/codegen/mex/GPReduce",
+    "command": "/usr/bin/xcrun -sdk macosx12.3 clang -fno-common -arch x86_64 -mmacosx-version-min=10.15 -fexceptions -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \".\" -I \"/Users/natasha/Downloads/TBM_software/TBM/GP\" -I \"./interface\" -I \"/Applications/MATLAB_R2022a.app/extern/include\" -I \".\" -DMODEL=GPReduce -c  rt_nonfinite.c -o build/maci64/rt_nonfinite.o",
+    "file": "rt_nonfinite.c",
+    "output": "build/maci64/rt_nonfinite.o"
+  },
+  {
+    "directory": "/Users/natasha/Downloads/TBM_software/TBM/GP/codegen/mex/GPReduce",
+    "command": "/usr/bin/xcrun -sdk macosx12.3 clang -fno-common -arch x86_64 -mmacosx-version-min=10.15 -fexceptions -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \".\" -I \"/Users/natasha/Downloads/TBM_software/TBM/GP\" -I \"./interface\" -I \"/Applications/MATLAB_R2022a.app/extern/include\" -I \".\" -DMODEL=GPReduce -c  GPReduce_initialize.c -o build/maci64/GPReduce_initialize.o",
+    "file": "GPReduce_initialize.c",
+    "output": "build/maci64/GPReduce_initialize.o"
+  },
+  {
+    "directory": "/Users/natasha/Downloads/TBM_software/TBM/GP/codegen/mex/GPReduce",
+    "command": "/usr/bin/xcrun -sdk macosx12.3 clang -fno-common -arch x86_64 -mmacosx-version-min=10.15 -fexceptions -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \".\" -I \"/Users/natasha/Downloads/TBM_software/TBM/GP\" -I \"./interface\" -I \"/Applications/MATLAB_R2022a.app/extern/include\" -I \".\" -DMODEL=GPReduce -c  GPReduce_terminate.c -o build/maci64/GPReduce_terminate.o",
+    "file": "GPReduce_terminate.c",
+    "output": "build/maci64/GPReduce_terminate.o"
+  },
+  {
+    "directory": "/Users/natasha/Downloads/TBM_software/TBM/GP/codegen/mex/GPReduce",
+    "command": "/usr/bin/xcrun -sdk macosx12.3 clang -fno-common -arch x86_64 -mmacosx-version-min=10.15 -fexceptions -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \".\" -I \"/Users/natasha/Downloads/TBM_software/TBM/GP\" -I \"./interface\" -I \"/Applications/MATLAB_R2022a.app/extern/include\" -I \".\" -DMODEL=GPReduce -c  GPReduce.c -o build/maci64/GPReduce.o",
+    "file": "GPReduce.c",
+    "output": "build/maci64/GPReduce.o"
+  },
+  {
+    "directory": "/Users/natasha/Downloads/TBM_software/TBM/GP/codegen/mex/GPReduce",
+    "command": "/usr/bin/xcrun -sdk macosx12.3 clang -fno-common -arch x86_64 -mmacosx-version-min=10.15 -fexceptions -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \".\" -I \"/Users/natasha/Downloads/TBM_software/TBM/GP\" -I \"./interface\" -I \"/Applications/MATLAB_R2022a.app/extern/include\" -I \".\" -DMODEL=GPReduce -c  interface/_coder_GPReduce_api.c -o build/maci64/_coder_GPReduce_api.o",
+    "file": "interface/_coder_GPReduce_api.c",
+    "output": "build/maci64/_coder_GPReduce_api.o"
+  },
+  {
+    "directory": "/Users/natasha/Downloads/TBM_software/TBM/GP/codegen/mex/GPReduce",
+    "command": "/usr/bin/xcrun -sdk macosx12.3 clang -fno-common -arch x86_64 -mmacosx-version-min=10.15 -fexceptions -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \".\" -I \"/Users/natasha/Downloads/TBM_software/TBM/GP\" -I \"./interface\" -I \"/Applications/MATLAB_R2022a.app/extern/include\" -I \".\" -DMODEL=GPReduce -c  interface/_coder_GPReduce_mex.c -o build/maci64/_coder_GPReduce_mex.o",
+    "file": "interface/_coder_GPReduce_mex.c",
+    "output": "build/maci64/_coder_GPReduce_mex.o"
+  },
+  {
+    "directory": "/Users/natasha/Downloads/TBM_software/TBM/GP/codegen/mex/GPReduce",
+    "command": "/usr/bin/xcrun -sdk macosx12.3 clang -fno-common -arch x86_64 -mmacosx-version-min=10.15 -fexceptions -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \".\" -I \"/Users/natasha/Downloads/TBM_software/TBM/GP\" -I \"./interface\" -I \"/Applications/MATLAB_R2022a.app/extern/include\" -I \".\" -DMODEL=GPReduce -c  sumMatrixIncludeNaN.c -o build/maci64/sumMatrixIncludeNaN.o",
+    "file": "sumMatrixIncludeNaN.c",
+    "output": "build/maci64/sumMatrixIncludeNaN.o"
+  },
+  {
+    "directory": "/Users/natasha/Downloads/TBM_software/TBM/GP/codegen/mex/GPReduce",
+    "command": "/usr/bin/xcrun -sdk macosx12.3 clang -fno-common -arch x86_64 -mmacosx-version-min=10.15 -fexceptions -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \".\" -I \"/Users/natasha/Downloads/TBM_software/TBM/GP\" -I \"./interface\" -I \"/Applications/MATLAB_R2022a.app/extern/include\" -I \".\" -DMODEL=GPReduce -c  GPReduce_emxutil.c -o build/maci64/GPReduce_emxutil.o",
+    "file": "GPReduce_emxutil.c",
+    "output": "build/maci64/GPReduce_emxutil.o"
+  },
+  {
+    "directory": "/Users/natasha/Downloads/TBM_software/TBM/GP/codegen/mex/GPReduce",
+    "command": "/usr/bin/xcrun -sdk macosx12.3 clang -fno-common -arch x86_64 -mmacosx-version-min=10.15 -fexceptions -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \".\" -I \"/Users/natasha/Downloads/TBM_software/TBM/GP\" -I \"./interface\" -I \"/Applications/MATLAB_R2022a.app/extern/include\" -I \".\" -DMODEL=GPReduce -c  interface/_coder_GPReduce_info.c -o build/maci64/_coder_GPReduce_info.o",
+    "file": "interface/_coder_GPReduce_info.c",
+    "output": "build/maci64/_coder_GPReduce_info.o"
+  },
+  {
+    "directory": "/Users/natasha/Downloads/TBM_software/TBM/GP/codegen/mex/GPReduce",
+    "command": "/usr/bin/xcrun -sdk macosx12.3 clang -fno-common -arch x86_64 -mmacosx-version-min=10.15 -fexceptions -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I \".\" -I \"/Users/natasha/Downloads/TBM_software/TBM/GP\" -I \"./interface\" -I \"/Applications/MATLAB_R2022a.app/extern/include\" -I \".\" -DMODEL=GPReduce -c  /Applications/MATLAB_R2022a.app/extern/version/c_mexapi_version.c -o build/maci64/c_mexapi_version.o",
+    "file": "/Applications/MATLAB_R2022a.app/extern/version/c_mexapi_version.c",
+    "output": "build/maci64/c_mexapi_version.o"
+  }
+]
