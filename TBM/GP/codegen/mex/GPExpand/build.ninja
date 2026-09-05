@@ -1,0 +1,51 @@
+# CompilerName=clang
+# Mode=optim
+ninja_required_version = 1.3
+
+# Basic folders
+root = .
+builddir = $root/build/maci64
+matlabdir = /Applications/MATLAB_R2022a.app
+startdir = /Users/natasha/Downloads/TBM_software/TBM/GP
+
+# Toolchain information
+cc = /usr/bin/xcrun -sdk macosx12.3 clang
+cxx = /usr/bin/xcrun -sdk macosx12.3 clang++
+linker = /usr/bin/xcrun -sdk macosx12.3 clang
+linkerxx = /usr/bin/xcrun -sdk macosx12.3 clang++
+
+cflags =  -fno-common -arch x86_64 -mmacosx-version-min=10.15 -fexceptions -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c99 -I "$root" -I "$startdir" -I "$root/interface" -I "$matlabdir/extern/include" -I "." -DMODEL=GPExpand -c 
+
+cxxflags =  -fno-common -arch x86_64 -mmacosx-version-min=10.15 -fexceptions -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -fobjc-arc -std=c++11 -stdlib=libc++ -DMATLAB_MEX_FILE -O2 -fwrapv -DNDEBUG -std=c++11 -I "$root" -I "$startdir" -I "$root/interface" -I "$matlabdir/extern/include" -I "." -DMODEL=GPExpand -c 
+
+ldflags =  -Wl,-twolevel_namespace -undefined error -arch x86_64 -mmacosx-version-min=10.15 -Wl,-syslibroot,/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk -bundle   -L"$matlabdir/bin/maci64" -lmx -lmex -lmat -lc++  -Wl,-rpath,@loader_path -o GPExpand.mexmaci64 -lemlrt -lcovrt -lut -lmwmathutil  -Wl,-exported_symbols_list,GPExpand.map
+
+# Build Rules
+rule cc
+    command = $cc $cflags $in -o $out
+
+rule cxx
+    command = $cxx $cxxflags $in -o $out
+
+rule link
+    command = $linker $in $ldflags
+
+rule linkxx
+    command = $linkerxx $in $ldflags
+
+# Build
+build $builddir/GPExpand_data.o : cc $root/GPExpand_data.c
+build $builddir/rt_nonfinite.o : cc $root/rt_nonfinite.c
+build $builddir/GPExpand_initialize.o : cc $root/GPExpand_initialize.c
+build $builddir/GPExpand_terminate.o : cc $root/GPExpand_terminate.c
+build $builddir/GPExpand.o : cc $root/GPExpand.c
+build $builddir/find.o : cc $root/find.c
+build $builddir/sumMatrixIncludeNaN.o : cc $root/sumMatrixIncludeNaN.c
+build $builddir/_coder_GPExpand_api.o : cc $root/interface/_coder_GPExpand_api.c
+build $builddir/_coder_GPExpand_mex.o : cc $root/interface/_coder_GPExpand_mex.c
+build $builddir/GPExpand_emxutil.o : cc $root/GPExpand_emxutil.c
+build $builddir/_coder_GPExpand_info.o : cc $root/interface/_coder_GPExpand_info.c
+build $builddir/c_mexapi_version.o : cc $matlabdir/extern/version/c_mexapi_version.c
+
+# Link
+build $root/GPExpand.mexmaci64 : link $builddir/GPExpand_data.o $builddir/rt_nonfinite.o $builddir/GPExpand_initialize.o $builddir/GPExpand_terminate.o $builddir/GPExpand.o $builddir/find.o $builddir/sumMatrixIncludeNaN.o $builddir/_coder_GPExpand_api.o $builddir/_coder_GPExpand_mex.o $builddir/GPExpand_emxutil.o $builddir/_coder_GPExpand_info.o $builddir/c_mexapi_version.o 
