@@ -189,10 +189,17 @@ def VOT3D(I0,I1,f1,f2,f3,scale,penalty=50,tot=1e6,sigma=1,level=0.25,gamma = 0.1
             xk1, xk2, xk3 = xk1_temp, xk2_temp, xk3_temp
             yk1, yk2, yk3 = yk1_temp, yk2_temp, yk3_temp
 
-        if (not converged) or iter < 3:
+        # yk1minus2, yk2minus2, yk3minus2 = yk1minus1, yk2minus1, yk3minus1
+        if not converged:
             yk1minus2, yk2minus2, yk3minus2 = yk1minus1, yk2minus1, yk3minus1
             yk1minus1, yk2minus1, yk3minus1 = yk1, yk2, yk3
             xk1minus1, xk2minus1, xk3minus1 = xk1, xk2, xk3
+        else:
+            print('iter:', iter)
+            if iter == 1:
+                yk1minus2, yk2minus2, yk3minus2 = f1, f2, f3
+            else:
+                yk1minus2, yk2minus2, yk3minus2 = yk1minus1, yk2minus1, yk3minus1
 
         err1[iter-1] = (0.5 * np.sum(((Ierror.flatten() / I0.flatten()) * mask.flatten())**2) / np.count_nonzero(mask) ) 
         err2[iter-1] = (0.5 * np.sum((Ierror.flatten() / I0.flatten())**2) / I0.size ) 
@@ -229,15 +236,6 @@ def VOT3D(I0,I1,f1,f2,f3,scale,penalty=50,tot=1e6,sigma=1,level=0.25,gamma = 0.1
         if iter > 50 and (objective[iter - 2] < objective[iter-1]):
             return results
 
-
-        if (
-            (converged and scale != 0) or (converged and scale == 0 and iter > 2) or
-            (iter > 500 and scale == 1 and round(err3[iter-1]) - round(err3[iter - 2]) * 10**6 == 0) or
-            (scale == 0 and round(err3[iter-1] * 10**3) / 10**3 <= cutoff  and iter > 2) or
-            (scale != 0 and err3[iter-1] <= cutoff0)
-        ): 
-            return results
-
         # print(np.sum(I0_recon))
         I0_recon = I0_recon / np.sum(I0_recon) * 10**6
         results['iter'] = iter
@@ -253,6 +251,14 @@ def VOT3D(I0,I1,f1,f2,f3,scale,penalty=50,tot=1e6,sigma=1,level=0.25,gamma = 0.1
         results["I0"] = I0
         results["I1"] = I1
         results["objective"] = objective
+
+        if (
+            (converged and scale != 0) or (converged and scale == 0 and iter > 2) or
+            (iter > 500 and scale == 1 and round(err3[iter-1]) - round(err3[iter - 2]) * 10**6 == 0) or
+            (scale == 0 and round(err3[iter-1] * 10**3) / 10**3 <= cutoff  and iter > 2) or
+            (scale != 0 and err3[iter-1] <= cutoff0)
+        ): 
+            return results
 
         iter += 1
 

@@ -117,14 +117,20 @@ def multVOT(I0,I1,lambda_=50,tot=1e6,sigma=1,numScales=4,level=0.25,gamma=0.1, d
                     f0 = 2 * upsample_to_shape(results['f1'] - X, newdim) + X2
                     g0 = 2 * upsample_to_shape(results['f2'] - Y, newdim) + Y2
                     h0 = 2 * upsample_to_shape(results['f3'] - Z, newdim) + Z2
-                    print(f0[:10,0,0])
-                    print(X2[:10,0,0])
-                    print(results['f1'][:10,0,0])
 
                     _, _, _, _, _, flag = compVOTGradients(f0, g0, h0,
                                                 np.zeros_like(f0),
                                                 np.zeros_like(f0),
                                                 0, gamma)
+
+                    while flag:
+                        f0 = convn(f0, phi) + X2
+                        g0 = convn(g0, phi) + Y2
+                        h0 = convn(h0, phi) + Z2
+                        _, _, _, _, _, flag = compVOTGradients(f0, g0, h0,
+                                                    np.zeros_like(f0),
+                                                    np.zeros_like(f0),
+                                                    0, gamma)
                     
                     if not flag:
                         print("now it is diffeomorphic!!")
