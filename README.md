@@ -85,6 +85,19 @@ External website http://imagedatascience.com/transport/
 
 Video [[tutorials](https://www.youtube.com/playlist?list=PLWqC8YvK1oV4pL5KvUsTb7LJdJCmyHvX0)]
 
+## Citation
+If you use PyTransKit in your research, please cite:
+
+```bibtex
+@software{pytranskit2026,
+  author = {Rubaiyat, Abu Hasnat Mohammad and Yin, Xuwang and Cattell, Liam and Shifat-E-Rabbi, Mohammad and Zhuang, Yan and Li, Shiying and Park, Serim and Kolouri, Soheil and Pathan, Naqib Sad and Kan, Hongyu and Rohde, Gustavo K.},
+  title = {{PyTransKit}: Python Transport Based Signal Processing Toolkit},
+  url = {https://github.com/rohdelab/PyTransKit},
+  version = {0.2.9},
+  year = {2026}
+}
+```
+
 ## Authors
 - Abu Hasnat Mohammad Rubaiyat
 - Mohammad Shifat E Rabbi
@@ -92,6 +105,9 @@ Video [[tutorials](https://www.youtube.com/playlist?list=PLWqC8YvK1oV4pL5KvUsTb7
 - Xuwang Yin
 - Shiying Li
 - Yan Zhuang
+- Naqib Sad Pathan
+- Hongyu Kan
 - Gustavo K. Rohde
 - Soheil Kolouri
 - Serim Park
+
