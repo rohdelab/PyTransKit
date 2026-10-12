@@ -14,8 +14,14 @@ class DiscreteLOT:
     Mohammad Shifat-E-Rabbi 
     Adapted for pytranskit and research workflow.
 
-    Original framework inspired by:
-    Kolouri, Soheil et al. (Optimal Transport methods)
+    Inspired by
+    ------------
+    1. "Wang W, Slepčev D, Basu S, Ozolek JA, Rohde GK. A linear optimal transportation 
+    framework for quantifying and visualizing variations in sets of images. 
+    International journal of computer vision. 2013 Jan;101(2):254-69."
+    2. "Flamary R, Courty N, Gramfort A, Alaya MZ, Boisbunon A, Chambon S, Chapel L, 
+    Corenflos A, Fatras K, Fournier N, Gautheron L. Pot: Python optimal transport. 
+    Journal of Machine Learning Research. 2021;22(78):1-8."
 
     Date
     ----

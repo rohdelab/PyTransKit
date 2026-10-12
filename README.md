@@ -93,7 +93,7 @@ If you use PyTransKit in your research, please cite:
   author = {Rubaiyat, Abu Hasnat Mohammad and Yin, Xuwang and Cattell, Liam and Shifat-E-Rabbi, Mohammad and Zhuang, Yan and Li, Shiying and Park, Serim and Kolouri, Soheil and Pathan, Naqib Sad and Kan, Hongyu and Rohde, Gustavo K.},
   title = {{PyTransKit}: Python Transport Based Signal Processing Toolkit},
   url = {https://github.com/rohdelab/PyTransKit},
-  version = {0.2.9},
+  version = {0.3.1},
   year = {2026}
 }
 ```

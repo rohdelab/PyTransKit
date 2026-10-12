@@ -20,10 +20,10 @@ sys.path.insert(0, os.path.abspath('../../'))
 
 project = 'PyTransKit'
 copyright = '2021, Abu Hasnat Mohammad Rubaiyat, Xuwang Yin, Liam Cattell, Soheil Kolouri, Mohammad Shifat-E-Rabbi, Yan Zhuang, Gustavo Rohde'
-author = 'Abu Hasnat Mohammad Rubaiyat, Xuwang Yin, Liam Cattell, Soheil Kolouri, Mohammad Shifat-E-Rabbi, Yan Zhuang, Gustavo Rohde'
+author = 'Abu Hasnat Mohammad Rubaiyat, Xuwang Yin, Liam Cattell, Soheil Kolouri, Mohammad Shifat-E-Rabbi, Yan Zhuang, Naqib Sad Pathan, Hongyu Kan, Gustavo Rohde'
 
 # The full version, including alpha/beta/rc tags
-release = '0.1'
+release = '0.3.1'
 
 
 # -- General configuration ---------------------------------------------------
